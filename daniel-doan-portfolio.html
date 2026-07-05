@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Doan | Digital Marketing Specialist — Google Ads, SEO & Web Development | Vancouver</title>
+  <meta name="description" content="Daniel Doan is a Vancouver-based digital marketing specialist in Google Ads, SEO, web design & development, social media, and email marketing. View case studies with measurable results.">
+  <meta name="author" content="Daniel Doan">
+  <meta property="og:title" content="Daniel Doan | Digital Marketing Specialist">
+  <meta property="og:description" content="Google Ads, SEO, web development, social media and email marketing — driven by measurable results.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0F2540;
+      --ink-soft:#33475E;
+      --slate:#5B6B7C;
+      --teal:#0E9AA7;
+      --teal-bright:#12B5A5;
+      --teal-tint:#E3F4F3;
+      --mist:#F5F8FA;
+      --line:#DEE6EC;
+      --white:#FFFFFF;
+      --radius:14px;
+      --display:'Bricolage Grotesque',sans-serif;
+      --body:'Inter',sans-serif;
+      --mono:'IBM Plex Mono',monospace;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:16px}
+    img{max-width:100%;display:block}
+    a{color:var(--teal)}
+    :focus-visible{outline:3px solid var(--teal-bright);outline-offset:2px;border-radius:4px}
+
+    .wrap{width:min(1120px,92%);margin:0 auto}
+    section{padding:88px 0}
+    .eyebrow{font-family:var(--mono);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+    h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
+    h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:14px}
+    .section-intro{color:var(--slate);max-width:56ch;margin-bottom:44px}
+
+    /* ---------- Header ---------- */
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .logo{font-family:var(--display);font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}
+    .logo span{color:var(--teal)}
+    .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+    .nav-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;font-weight:500;transition:color .2s}
+    .nav-links a:hover{color:var(--teal)}
+    .nav-cta{background:var(--ink);color:var(--white)!important;padding:9px 18px;border-radius:999px}
+    .nav-cta:hover{background:var(--teal)}
+    .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-family:var(--mono);font-size:.8rem;cursor:pointer;color:var(--ink)}
+
+    /* ---------- Hero ---------- */
+    .hero{padding:104px 0 96px;background:
+      radial-gradient(1100px 480px at 85% -10%, var(--teal-tint), transparent 60%),
+      var(--white);
+      position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+    .hero h1{font-size:clamp(2.4rem,5.4vw,3.9rem);font-weight:800;margin:10px 0 18px}
+    .hero h1 em{font-style:normal;color:var(--teal)}
+    .hero-title-line{font-family:var(--mono);font-size:.85rem;color:var(--ink-soft);letter-spacing:.02em}
+    .hero p.value{font-size:1.12rem;color:var(--slate);max-width:48ch;margin-bottom:32px}
+    .btn-row{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.95rem;padding:14px 28px;border-radius:999px;transition:transform .15s,box-shadow .15s,background .2s}
+    .btn-primary{background:var(--teal);color:var(--white)}
+    .btn-primary:hover{background:var(--ink);transform:translateY(-2px);box-shadow:0 10px 24px rgba(14,154,167,.25)}
+    .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+    .btn-ghost:hover{background:var(--ink);color:var(--white);transform:translateY(-2px)}
+    .spark-card{background:var(--ink);border-radius:20px;padding:30px 28px 24px;color:var(--white);box-shadow:0 24px 60px rgba(15,37,64,.28)}
+    .spark-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#9FB3C8;display:flex;justify-content:space-between;margin-bottom:10px}
+    .spark-metric{font-family:var(--display);font-size:2.3rem;font-weight:800}
+    .spark-metric small{font-size:1rem;color:var(--teal-bright);font-family:var(--mono);font-weight:500;margin-left:8px}
+    .spark-svg{width:100%;height:auto;margin-top:10px}
+    .spark-foot{display:flex;gap:18px;margin-top:18px;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;flex-wrap:wrap}
+    .spark-foot div{font-family:var(--mono);font-size:.74rem;color:#9FB3C8}
+    .spark-foot strong{display:block;color:var(--white);font-size:1rem;font-weight:600}
+
+    /* ---------- About ---------- */
+    .about{background:var(--mist)}
+    .about-grid{display:grid;grid-template-columns:300px 1fr;gap:52px;align-items:start}
+    .photo-ph{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(160deg,var(--teal-tint),#D3E3EE);display:flex;align-items:center;justify-content:center;color:var(--slate);font-family:var(--mono);font-size:.8rem;border:1.5px dashed var(--teal)}
+    .about p{color:var(--ink-soft);margin-bottom:16px;max-width:62ch}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+    .stat{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px}
+    .stat b{display:block;font-family:var(--display);font-size:1.8rem;font-weight:800;color:var(--teal)}
+    .stat span{font-size:.82rem;color:var(--slate)}
+
+    /* ---------- Skills ---------- */
+    .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+    .skill{border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:transform .2s,box-shadow .2s;background:var(--white)}
+    .skill:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(15,37,64,.09)}
+    .skill-icon{width:44px;height:44px;border-radius:11px;background:var(--teal-tint);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+    .skill-icon svg{width:22px;height:22px;stroke:var(--teal)}
+    .skill h3{font-size:1.08rem;font-weight:700;margin-bottom:10px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tags li{list-style:none;font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);background:var(--mist);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+
+    /* ---------- Portfolio ---------- */
+    .work{background:var(--mist)}
+    .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+    .case{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+    .case:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,37,64,.10)}
+    .case-img{aspect-ratio:16/9;background:linear-gradient(140deg,#DCE9F2,var(--teal-tint));display:flex;align-items:center;justify-content:center;color:var(--slate);font-family:var(--mono);font-size:.75rem;border-bottom:1px solid var(--line)}
+    .case-body{padding:24px;display:flex;flex-direction:column;gap:12px;flex:1}
+    .case h3{font-size:1.12rem;font-weight:700}
+    .case .role{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+    .csr{font-size:.9rem;color:var(--ink-soft)}
+    .csr b{color:var(--ink);font-weight:600}
+    .metrics{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:14px;border-top:1px dashed var(--line)}
+    .chip{font-family:var(--mono);font-size:.76rem;font-weight:600;color:var(--teal);background:var(--teal-tint);padding:6px 12px;border-radius:8px}
+    .chip.up::before{content:"▲ ";font-size:.6rem}
+    .chip.down::before{content:"▼ ";font-size:.6rem}
+
+    /* ---------- Certifications ---------- */
+    .cert-row{display:flex;flex-wrap:wrap;gap:16px}
+    .cert{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:var(--radius);padding:16px 22px;background:var(--white)}
+    .cert-badge{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:.85rem;flex-shrink:0}
+    .cert b{display:block;font-size:.95rem}
+    .cert span{font-size:.78rem;color:var(--slate);font-family:var(--mono)}
+
+    /* ---------- Testimonials ---------- */
+    .testi{background:var(--ink);color:var(--white)}
+    .testi h2{color:var(--white)}
+    .testi .section-intro{color:#9FB3C8}
+    .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+    .quote{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:28px 26px}
+    .quote p{font-size:.97rem;color:#DCE7F0;margin-bottom:18px}
+    .quote .mark{font-family:var(--display);font-size:2.2rem;color:var(--teal-bright);line-height:1;display:block;margin-bottom:10px}
+    .quote b{font-size:.9rem;display:block}
+    .quote span{font-size:.78rem;color:#9FB3C8;font-family:var(--mono)}
+
+    /* ---------- Contact ---------- */
+    .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+    .contact-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:24px}
+    .contact-list a{color:var(--ink);text-decoration:none;font-weight:500}
+    .contact-list a:hover{color:var(--teal)}
+    .contact-list li{display:flex;align-items:center;gap:12px}
+    .ci{width:38px;height:38px;border-radius:10px;background:var(--teal-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ci svg{width:18px;height:18px;stroke:var(--teal)}
+    form{display:flex;flex-direction:column;gap:14px}
+    label{font-size:.85rem;font-weight:600;color:var(--ink)}
+    input,textarea{font-family:var(--body);font-size:.95rem;padding:13px 16px;border:1px solid var(--line);border-radius:10px;background:var(--mist);color:var(--ink);width:100%}
+    input:focus,textarea:focus{outline:2px solid var(--teal-bright);background:var(--white)}
+    textarea{min-height:130px;resize:vertical}
+    .form-note{font-size:.78rem;color:var(--slate);font-family:var(--mono)}
+
+    footer{border-top:1px solid var(--line);padding:28px 0;font-size:.82rem;color:var(--slate);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+    /* ---------- Reveal animation ---------- */
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+      .skill:hover,.case:hover,.btn:hover{transform:none}
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width:900px){
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .photo-ph{max-width:300px}
+      section{padding:64px 0}
+      .nav-links{position:absolute;top:68px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px 4%;gap:18px;border-bottom:1px solid var(--line);display:none;align-items:flex-start}
+      .nav-links.open{display:flex}
+      .menu-btn{display:block}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap" aria-label="Main navigation">
+    <a class="logo" href="#top">Daniel<span>.</span>Doan</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" onclick="toggleMenu(this)">MENU</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Case Studies</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-title-line">Digital Marketing Specialist &nbsp;·&nbsp; Google Ads · SEO · Web Development</p>
+        <h1>I turn ad spend and search traffic into <em>measurable revenue</em>.</h1>
+        <p class="value">Vancouver-based marketer combining paid media, SEO, and hands-on web development to build campaigns that are tracked, tested, and tied to real business results.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#work">View My Work</a>
+          <a class="btn btn-ghost" href="resume-daniel-doan.pdf" download>Download Resume</a>
+        </div>
+      </div>
+
+      <div class="spark-card" aria-label="Sample campaign performance">
+        <div class="spark-label"><span>Campaign Performance</span><span>Last 12 mo</span></div>
+        <div class="spark-metric">+184% <small>ROAS</small></div>
+        <svg class="spark-svg" viewBox="0 0 320 110" role="img" aria-label="Upward performance trend line">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#12B5A5" stop-opacity=".45"/>
+              <stop offset="100%" stop-color="#12B5A5" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,95 L40,88 L80,90 L120,72 L160,64 L200,48 L240,38 L280,22 L320,10 L320,110 L0,110 Z" fill="url(#g1)"/>
+          <path d="M0,95 L40,88 L80,90 L120,72 L160,64 L200,48 L240,38 L280,22 L320,10" fill="none" stroke="#12B5A5" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="320" cy="10" r="5" fill="#12B5A5"/>
+        </svg>
+        <div class="spark-foot">
+          <div><strong>-38%</strong>Cost / Conv.</div>
+          <div><strong>4.6%</strong>Avg. CTR</div>
+          <div><strong>+120%</strong>Organic Traffic</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <p class="eyebrow reveal">01 — About</p>
+      <div class="about-grid">
+        <div class="photo-ph reveal" role="img" aria-label="Placeholder for professional headshot of Daniel Doan">[ Your professional headshot ]</div>
+        <div class="reveal">
+          <h2>Marketing that starts with data and ends with results.</h2>
+          <p>[Placeholder bio — replace with your own.] I'm Daniel Doan, a digital marketing specialist based in Vancouver, BC. Over the past [X] years I've planned and managed Google Ads campaigns, grown organic traffic through technical and on-page SEO, and designed and built the websites those campaigns land on — so nothing gets lost between strategy and execution.</p>
+          <p>Whether it's a Performance Max campaign, an email automation flow, or a full site rebuild, my approach is the same: set a clear KPI, measure everything, and iterate until the numbers move.</p>
+          <div class="stats">
+            <div class="stat"><b>25+</b><span>Campaigns managed</span></div>
+            <div class="stat"><b>184%</b><span>Avg. ROAS improvement</span></div>
+            <div class="stat"><b>12</b><span>Websites designed &amp; built</span></div>
+            <div class="stat"><b>$150K+</b><span>Ad spend managed</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow reveal">02 — Skills</p>
+      <h2 class="reveal">Five disciplines, one full-funnel skill set</h2>
+      <p class="section-intro reveal">From the first ad impression to the final email conversion — I cover the whole journey.</p>
+      <div class="skill-grid">
+
+        <article class="skill reveal">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+          <h3>Google Ads</h3>
+          <ul class="tags"><li>Search</li><li>Display</li><li>Performance Max</li><li>Keyword strategy</li><li>Bid optimization</li></ul>
+        </article>
+
+        <article class="skill reveal">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <h3>SEO</h3>
+          <ul class="tags"><li>On-page</li><li>Technical SEO</li><li>Keyword research</li><li>Google Analytics 4</li><li>Search Console</li></ul>
+        </article>
+
+        <article class="skill reveal">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6"/><path d="M16 6l6 6-6 6"/></svg></div>
+          <h3>Website Design &amp; Development</h3>
+          <ul class="tags"><li>WordPress</li><li>Shopify</li><li>HTML / CSS</li><li>JavaScript</li><li>UX &amp; landing pages</li></ul>
+        </article>
+
+        <article class="skill reveal">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8a5 5 0 1 0-10 0v6l-2 3h14l-2-3z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
+          <h3>Social Media Marketing</h3>
+          <ul class="tags"><li>Content strategy</li><li>Paid social</li><li>Meta Ads</li><li>Community growth</li><li>Creative testing</li></ul>
+        </article>
+
+        <article class="skill reveal">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+          <h3>Email Marketing</h3>
+          <ul class="tags"><li>Campaign automation</li><li>List segmentation</li><li>A/B testing</li><li>Mailchimp</li><li>Klaviyo</li></ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO / CASE STUDIES ============ -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <p class="eyebrow reveal">03 — Case Studies</p>
+      <h2 class="reveal">Selected work, measured in outcomes</h2>
+      <p class="section-intro reveal">Every project follows the same structure: the challenge, the strategy, and the numbers it produced. (Placeholder metrics — replace with your real results.)</p>
+      <div class="case-grid">
+
+        <article class="case reveal">
+          <div class="case-img">[ Project screenshot ]</div>
+          <div class="case-body">
+            <span class="role">Google Ads · Landing Page</span>
+            <h3>E-commerce ROAS Turnaround</h3>
+            <p class="csr"><b>Challenge:</b> A local retailer was spending $5K/mo on Ads with break-even returns. <b>Strategy:</b> Restructured campaigns into Performance Max + branded search, rebuilt the landing page, and tightened negative keywords. <b>Results:</b></p>
+            <div class="metrics"><span class="chip up">184% ROAS</span><span class="chip down">38% CPA</span><span class="chip up">2.1x Conv. rate</span></div>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-img">[ Project screenshot ]</div>
+          <div class="case-body">
+            <span class="role">SEO · Content</span>
+            <h3>Organic Traffic Growth Sprint</h3>
+            <p class="csr"><b>Challenge:</b> A service business ranked page 3+ for its core keywords. <b>Strategy:</b> Technical audit, site-speed fixes, keyword-mapped content plan, and internal linking overhaul. <b>Results:</b></p>
+            <div class="metrics"><span class="chip up">120% organic traffic</span><span class="chip up">15 top-10 keywords</span><span class="chip up">3x leads</span></div>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-img">[ Project screenshot ]</div>
+          <div class="case-body">
+            <span class="role">Web Design · Development</span>
+            <h3>Small Business Site Rebuild</h3>
+            <p class="csr"><b>Challenge:</b> An outdated, slow site was losing mobile visitors. <b>Strategy:</b> Redesigned and rebuilt on WordPress with a mobile-first layout, compressed assets, and clear conversion paths. <b>Results:</b></p>
+            <div class="metrics"><span class="chip up">92 PageSpeed score</span><span class="chip down">54% bounce rate</span><span class="chip up">2x inquiries</span></div>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-img">[ Project screenshot ]</div>
+          <div class="case-body">
+            <span class="role">Email · Automation</span>
+            <h3>Abandoned Cart Recovery Flow</h3>
+            <p class="csr"><b>Challenge:</b> An online store had no email automation and high cart abandonment. <b>Strategy:</b> Built a 3-step Klaviyo flow with segmented offers and A/B-tested subject lines. <b>Results:</b></p>
+            <div class="metrics"><span class="chip up">28% recovery rate</span><span class="chip up">41% open rate</span><span class="chip up">$12K revenue</span></div>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-img">[ Project screenshot ]</div>
+          <div class="case-body">
+            <span class="role">Social · Paid Media</span>
+            <h3>Meta Ads Lead Generation</h3>
+            <p class="csr"><b>Challenge:</b> A B2C brand needed a predictable lead pipeline. <b>Strategy:</b> Creative testing framework across Meta placements, lookalike audiences, and a dedicated lead form funnel. <b>Results:</b></p>
+            <div class="metrics"><span class="chip up">340 leads / mo</span><span class="chip down">45% cost per lead</span><span class="chip up">5.2% CTR</span></div>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-img">[ Project screenshot ]</div>
+          <div class="case-body">
+            <span class="role">Full Funnel</span>
+            <h3>Integrated Launch Campaign</h3>
+            <p class="csr"><b>Challenge:</b> A new product launch with no existing audience. <b>Strategy:</b> Coordinated Google Ads, SEO landing content, social teasers, and a pre-launch email list into one funnel. <b>Results:</b></p>
+            <div class="metrics"><span class="chip up">1,800 signups</span><span class="chip up">6.4x ROAS</span><span class="chip up">Sold out wk 1</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certs">
+    <div class="wrap">
+      <p class="eyebrow reveal">04 — Certifications</p>
+      <h2 class="reveal">Certified where it counts</h2>
+      <div class="cert-row" style="margin-top:34px">
+        <div class="cert reveal"><div class="cert-badge">GA</div><div><b>Google Ads Certification</b><span>Search · Display · Measurement</span></div></div>
+        <div class="cert reveal"><div class="cert-badge">G4</div><div><b>Google Analytics 4</b><span>GA4 Certification</span></div></div>
+        <div class="cert reveal"><div class="cert-badge">HS</div><div><b>HubSpot</b><span>Inbound Marketing</span></div></div>
+        <div class="cert reveal"><div class="cert-badge">M</div><div><b>Meta Blueprint</b><span>[Optional — edit or remove]</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testi" aria-label="Testimonials">
+    <div class="wrap">
+      <p class="eyebrow reveal">05 — Testimonials</p>
+      <h2 class="reveal">What clients and managers say</h2>
+      <p class="section-intro reveal">(Placeholder quotes — replace with real references.)</p>
+      <div class="testi-grid">
+        <blockquote class="quote reveal"><span class="mark">“</span><p>Daniel rebuilt our ad account and our cost per lead dropped within the first month. He explains everything in plain numbers, which made it easy to trust the process.</p><b>[Client Name]</b><span>Owner, [Company]</span></blockquote>
+        <blockquote class="quote reveal"><span class="mark">“</span><p>Rare to find someone who can both run the campaigns and build the website they land on. Daniel closed that gap for us completely.</p><b>[Manager Name]</b><span>Marketing Director, [Company]</span></blockquote>
+        <blockquote class="quote reveal"><span class="mark">“</span><p>Organized, data-driven, and fast. Our organic traffic more than doubled during his SEO engagement.</p><b>[Client Name]</b><span>Founder, [Company]</span></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">06 — Contact</p>
+        <h2>Let's talk about your next campaign.</h2>
+        <p class="section-intro">Open to full-time digital marketing roles in Vancouver or remote. I usually reply within one business day.</p>
+        <ul class="contact-list">
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><a href="mailto:hello@danieldoan.com">hello@danieldoan.com</a></li>
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg></span><a href="tel:+16040000000">+1 (604) 000-0000</a></li>
+          <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg></span><a href="https://www.linkedin.com/in/your-profile" rel="noopener">linkedin.com/in/your-profile</a></li>
+        </ul>
+      </div>
+      <form class="reveal" onsubmit="handleSubmit(event)" aria-label="Contact form">
+        <div><label for="f-name">Name</label><input id="f-name" name="name" type="text" required autocomplete="name"></div>
+        <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        <div><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+        <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer">Send message</button>
+        <p class="form-note">// Connect this form to Formspree, Netlify Forms, or your own backend before launch.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Daniel Doan — Vancouver, BC</span>
+    <span>Built by hand. Optimized for speed &amp; search.</span>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  function toggleMenu(btn){
+    const nav = document.getElementById('nav-links');
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  }
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{
+    document.getElementById('nav-links').classList.remove('open');
+    document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+  }));
+
+  // Scroll reveal (respects reduced motion via CSS)
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Contact form placeholder handler
+  function handleSubmit(e){
+    e.preventDefault();
+    alert('Thanks! This demo form is not connected yet — hook it up to Formspree, Netlify Forms, or your own endpoint.');
+    e.target.reset();
+  }
+</script>
+
+</body>
+</html>
