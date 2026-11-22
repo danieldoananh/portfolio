@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Doan | Web Developer — WordPress, Landing Pages &amp; Conversion Tracking</title>
+  <meta name="description" content="Daniel Doan is a Canada-based web developer who builds WordPress landing pages for Google Ads campaigns and sets up the GA4, Google Tag Manager and Google Ads conversion tracking behind them.">
+  <meta name="author" content="Daniel Doan">
+  <meta property="og:title" content="Daniel Doan | Web Developer — WordPress &amp; Landing Pages">
+  <meta property="og:description" content="WordPress landing pages built for paid traffic, with GA4 + GTM conversion tracking that actually fires.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://danieldoananh.github.io/portfolio/web-developer/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0F2540; --ink-soft:#33475E; --slate:#5B6B7C;
+      --teal:#0E9AA7; --teal-bright:#12B5A5; --teal-tint:#E3F4F3;
+      --amber:#F2A93B;
+      --mist:#F5F8FA; --line:#DEE6EC; --white:#FFFFFF;
+      --code-bg:#0B1B2F;
+      --radius:14px;
+      --display:'Bricolage Grotesque',sans-serif;
+      --body:'Inter',sans-serif;
+      --mono:'IBM Plex Mono',monospace;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:16px}
+    img{max-width:100%;display:block}
+    a{color:var(--teal)}
+    :focus-visible{outline:3px solid var(--teal-bright);outline-offset:2px;border-radius:4px}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    section{padding:88px 0}
+    .eyebrow{font-family:var(--mono);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+    h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-.01em}
+    h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:14px}
+    .section-intro{color:var(--slate);max-width:60ch;margin-bottom:44px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .logo{font-family:var(--display);font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}
+    .logo span{color:var(--teal)}
+    .logo small{font-family:var(--mono);font-size:.7rem;font-weight:500;color:var(--slate);margin-left:8px;letter-spacing:.06em}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;font-weight:500}
+    .nav-links a:hover{color:var(--teal)}
+    .nav-cta{background:var(--ink);color:var(--white)!important;padding:9px 18px;border-radius:999px}
+    .nav-cta:hover{background:var(--teal)}
+    .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-family:var(--mono);font-size:.8rem;cursor:pointer;color:var(--ink)}
+
+    /* Hero */
+    .hero{padding:96px 0 88px;background:radial-gradient(1000px 460px at 90% -10%,var(--teal-tint),transparent 60%),var(--white)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+    .hero-title-line{font-family:var(--mono);font-size:.85rem;color:var(--ink-soft)}
+    .hero h1{font-size:clamp(2.3rem,5.2vw,3.7rem);font-weight:800;margin:10px 0 18px}
+    .hero h1 em{font-style:normal;color:var(--teal)}
+    .hero p.value{font-size:1.1rem;color:var(--slate);max-width:50ch;margin-bottom:26px}
+    .facts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;list-style:none}
+    .facts li{font-family:var(--mono);font-size:.74rem;color:var(--ink-soft);background:var(--white);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+    .facts li b{color:var(--teal);font-weight:600}
+    .btn-row{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.95rem;padding:14px 26px;border-radius:999px;transition:transform .15s,box-shadow .15s,background .2s}
+    .btn-primary{background:var(--teal);color:var(--white)}
+    .btn-primary:hover{background:var(--ink);transform:translateY(-2px);box-shadow:0 10px 24px rgba(14,154,167,.25)}
+    .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+    .btn-ghost:hover{background:var(--ink);color:var(--white);transform:translateY(-2px)}
+
+    /* Hero code card */
+    .code-card{background:var(--code-bg);border-radius:18px;box-shadow:0 24px 60px rgba(15,37,64,.28);overflow:hidden;color:#D6E2EE}
+    .code-top{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .code-top i{width:10px;height:10px;border-radius:50%;background:#33475E;display:block}
+    .code-top span{margin-left:auto;font-family:var(--mono);font-size:.7rem;color:#8FA6BC}
+    .code-card pre{font-family:var(--mono);font-size:.78rem;line-height:1.7;padding:18px 20px;overflow-x:auto;white-space:pre}
+    .k{color:#7FD6CF}.s{color:#F7C77E}.c{color:#6F8AA5}.p{color:#C7A6FF}
+    .fire{display:flex;flex-direction:column;gap:8px;padding:14px 20px 18px;border-top:1px solid rgba(255,255,255,.08)}
+    .fire div{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.74rem;color:#9FB3C8}
+    .fire b{color:var(--teal-bright);font-weight:600}
+
+    /* Work */
+    .work{background:var(--mist)}
+    .proj{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:28px;margin-bottom:28px}
+    .proj:nth-child(even) .proj-media{order:2}
+    .proj-media{display:grid;gap:12px}
+    .proj-media img{border-radius:12px;border:1px solid var(--line);width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top center;background:#fff}
+    .proj-media.two{grid-template-columns:1fr 1fr}
+    .proj-media .contain{object-fit:contain;padding:8px}
+    .role{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+    .proj h3{font-size:1.4rem;font-weight:700;margin:8px 0 12px}
+    .proj p{color:var(--ink-soft);font-size:.95rem;margin-bottom:12px}
+    .proj ul.points{margin:4px 0 16px 18px;color:var(--ink-soft);font-size:.92rem}
+    .proj ul.points li{margin-bottom:6px}
+    .proj ul.points b{color:var(--ink)}
+    .stack{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin-bottom:16px}
+    .stack li{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);background:var(--mist);border:1px solid var(--line);padding:3px 9px;border-radius:6px}
+    .metrics{display:flex;gap:8px;flex-wrap:wrap;padding-top:14px;border-top:1px dashed var(--line)}
+    .chip{font-family:var(--mono);font-size:.74rem;font-weight:600;color:var(--teal);background:var(--teal-tint);padding:6px 11px;border-radius:8px}
+    .live{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-weight:600;font-size:.9rem;text-decoration:none}
+    .live:hover{text-decoration:underline}
+    .links{display:flex;flex-wrap:wrap;gap:8px 18px}
+
+    .mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .mini{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+    .mini h3{font-size:1.08rem;margin:8px 0 10px}
+    .mini p{font-size:.9rem;color:var(--ink-soft);margin-bottom:10px}
+
+    /* Tracking */
+    .track-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+    .track-grid img{border-radius:14px;border:1px solid var(--line)}
+    .steps{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:14px}
+    .steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start}
+    .steps li::before{content:counter(s);width:36px;height:36px;border-radius:10px;background:var(--teal-tint);color:var(--teal);font-family:var(--mono);font-weight:600;display:flex;align-items:center;justify-content:center}
+    .steps b{display:block;font-size:.98rem}
+    .steps span{font-size:.9rem;color:var(--slate)}
+
+    /* QA */
+    .qa{background:var(--ink);color:var(--white)}
+    .qa h2{color:var(--white)}
+    .qa .section-intro{color:#9FB3C8}
+    .qa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .qa-col{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:22px}
+    .qa-col h3{font-size:1rem;margin-bottom:12px;color:var(--teal-bright);font-family:var(--mono);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+    .qa-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .qa-col li{font-size:.9rem;color:#DCE7F0;padding-left:24px;position:relative}
+    .qa-col li::before{content:"";position:absolute;left:0;top:5px;width:13px;height:13px;border:1.5px solid var(--teal-bright);border-radius:4px}
+    .story{margin-top:28px;background:rgba(18,181,165,.08);border:1px solid rgba(18,181,165,.35);border-radius:var(--radius);padding:24px 26px}
+    .story b{color:var(--teal-bright);font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:8px}
+    .story p{color:#DCE7F0;font-size:.95rem;max-width:80ch}
+
+    /* Skills */
+    .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+    .skill{border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+    .skill h3{font-size:1.02rem;margin-bottom:12px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none}
+    .tags li{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);background:var(--mist);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+
+    /* Experience */
+    .exp{background:var(--mist)}
+    .timeline{display:flex;flex-direction:column;gap:14px}
+    .job{display:grid;grid-template-columns:200px 1fr;gap:24px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+    .job .when{font-family:var(--mono);font-size:.78rem;color:var(--slate)}
+    .job h3{font-size:1.05rem}
+    .job .org{font-size:.86rem;color:var(--teal);font-weight:600;margin-bottom:6px}
+    .job p{font-size:.9rem;color:var(--ink-soft)}
+
+    /* Contact */
+    .contact-box{max-width:720px}
+    .contact-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:24px 0 30px}
+    .contact-list li{display:flex;align-items:center;gap:12px}
+    .contact-list a{color:var(--ink);text-decoration:none;font-weight:500}
+    .contact-list a:hover{color:var(--teal)}
+    .ci{width:38px;height:38px;border-radius:10px;background:var(--teal-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ci svg{width:18px;height:18px;stroke:var(--teal)}
+
+    footer{border-top:1px solid var(--line);padding:28px 0;font-size:.82rem;color:var(--slate)}
+    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+      .btn:hover{transform:none}
+    }
+    @media (max-width:900px){
+      .hero-grid,.proj,.track-grid{grid-template-columns:1fr}
+      .proj:nth-child(even) .proj-media{order:0}
+      .job{grid-template-columns:1fr;gap:6px}
+      section{padding:64px 0}
+      .nav-links{position:absolute;top:68px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px 16px;gap:18px;border-bottom:1px solid var(--line);display:none;align-items:flex-start}
+      .nav-links.open{display:flex}
+      .menu-btn{display:block}
+      .logo small{display:none}
+    }
+    @media (max-width:520px){
+      .proj{padding:18px}
+      .proj-media.two{grid-template-columns:1fr}
+      .code-card pre{font-size:.7rem}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap" aria-label="Main navigation">
+    <a class="logo" href="#top">Daniel<span>.</span>Doan<small>WEB DEVELOPER</small></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" onclick="toggleMenu(this)">MENU</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#work">Landing Pages</a></li>
+      <li><a href="#tracking">Tracking</a></li>
+      <li><a href="#qa">QA</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-title-line">Web Developer · WordPress · Landing Pages · GA4 &amp; GTM</p>
+        <h1>I build landing pages for Google Ads, and I check that <em>every conversion fires</em>.</h1>
+        <p class="value">I build WordPress sites and landing pages for paid traffic, from brief to launch, across several client accounts. I've spent 4+ years in WordPress, and I set up and debug the GA4, Google Tag Manager and Google Ads tracking that shows clients which ads bring in leads.</p>
+        <ul class="facts" aria-label="Quick facts">
+          <li><b>4+ yrs</b> WordPress</li>
+          <li><b>20+</b> sites &amp; landing pages</li>
+          <li><b>10+</b> client sites</li>
+          <li><b>Vancouver, BC</b> · Pacific Time</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#work">See Landing Pages</a>
+          <a class="btn btn-ghost" href="../resume-daniel-doan.pdf" download>Download Resume</a>
+        </div>
+      </div>
+
+      <div class="code-card" aria-label="Example of a form-submission dataLayer push and the conversions it triggers">
+        <div class="code-top"><i></i><i></i><i></i><span>landing-page.js</span></div>
+<pre><span class="c">// Form success → dataLayer → GTM</span>
+<span class="k">window</span>.dataLayer = <span class="k">window</span>.dataLayer || [];
+<span class="k">window</span>.dataLayer.<span class="p">push</span>({
+  event: <span class="s">'generate_lead'</span>,
+  form_id: <span class="s">'book_a_tour'</span>,
+  page_type: <span class="s">'ads_landing'</span>,
+  campus: <span class="s">'vancouver'</span>
+});</pre>
+        <div class="fire">
+          <div><span>GA4 · generate_lead</span><b>✓ fired</b></div>
+          <div><span>Google Ads · Lead conversion</span><b>✓ fired</b></div>
+          <div><span>Tag Assistant · preview</span><b>✓ verified</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANDING PAGES -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <p class="eyebrow reveal">01 — Landing Pages &amp; Sites</p>
+      <h2 class="reveal">Pages built for paid traffic</h2>
+      <p class="section-intro reveal">Each of these went from a short brief to a live page. I built the page, wired the form, set up tracking, and tested on mobile before launch.</p>
+
+      <div class="proj-list">
+
+        <article class="proj reveal">
+          <div class="proj-media two">
+            <img src="../images/columbia-website-mockup.jpg" alt="Columbia Academy landing page on laptop and phone, with a school-tour CTA and an inquiry form above the fold" loading="lazy">
+            <img src="../images/Untitled%20design-20.jpg" alt="Columbia Academy Elementary tuition and fee landing page on laptop and phone, with a 'Need Help?' admissions form" loading="lazy">
+          </div>
+          <div>
+            <span class="role">WordPress · Elementor · Google Ads landing pages</span>
+            <h3>Columbia Academy: admissions landing pages</h3>
+            <p>A private school in Vancouver running Google Ads to parents. Each ad group needed its own landing page that matched what the parent had searched for, such as elementary tuition or a campus tour.</p>
+            <ul class="points">
+              <li><b>Built 8+ campus- and program-specific pages</b> in Elementor that share one consistent layout.</li>
+              <li><b>Inquiry form above the fold</b> on desktop. On mobile it sits right after the hero, with a sticky "Book a School Tour" CTA.</li>
+              <li><b>Tracked form submissions, tour clicks and brochure downloads</b> as GA4 events and Google Ads conversions. Leads go to Mailchimp through Zapier for nurture emails.</li>
+            </ul>
+            <ul class="stack"><li>WordPress</li><li>Elementor</li><li>GA4</li><li>GTM</li><li>Google Ads</li><li>Zapier</li><li>Mailchimp</li></ul>
+            <div class="metrics"><span class="chip">15 conversions / mo</span><span class="chip">$81 cost / conversion</span><span class="chip">10–15 inquiries / mo</span></div>
+            <div class="links">
+              <a class="live" href="https://columbiaacademy.ca/" target="_blank" rel="noopener">Visit live site ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div class="proj-media">
+            <img src="../images/mrswirl-website-mockup.jpg" alt="Redesigned Mr. Swirl Plumbing website on laptop and phone, with technician photography, sticky call buttons and live chat" loading="lazy">
+          </div>
+          <div>
+            <span class="role">WordPress · Divi · Redesign + city landing pages</span>
+            <h3>Mr. Swirl Plumbing: site redesign and 10+ city pages</h3>
+            <p>A plumbing company spending about $10K a month on Google Ads, whose site used stock photos and long text that didn't convert. I rebuilt it to load fast and make calling easy.</p>
+            <ul class="points">
+              <li><b>Redesigned the full site in Divi</b> using real technician photos, sticky call and booking CTAs, and reviews placed near each CTA.</li>
+              <li><b>Built 10+ city landing pages</b> (Coquitlam, Maple Ridge, New Westminster and more) on a reusable layout with unique local content.</li>
+              <li><b>Added an AI chatbot</b> that captures and qualifies leads after hours.</li>
+            </ul>
+            <ul class="stack"><li>WordPress</li><li>Divi</li><li>HTML/CSS</li><li>GTM</li><li>GA4</li><li>Google Ads</li></ul>
+            <div class="metrics"><span class="chip">+20% homepage conversions</span><span class="chip">−20% cost / lead</span><span class="chip">+60% city-page organic traffic</span></div>
+          </div>
+        </article>
+
+        <article class="proj reveal">
+          <div class="proj-media two">
+            <img class="contain" src="../images/landscaping-kamloops-seo.png" alt="Search Console 6-month comparison for a Kamloops landscaping client: clicks 2.55K to 3.38K" loading="lazy">
+            <img class="contain" src="../images/event-rentals-kelowna-seo.png" alt="Search Console 6-month comparison for a Kelowna event rentals client: clicks 2.08K to 5.71K" loading="lazy">
+          </div>
+          <div>
+            <span class="role">Agency · Multi-client · Elementor</span>
+            <h3>Rithaler Consulting: agency work for local service clients</h3>
+            <p>Agency work across 5+ local service businesses, including landscaping, event rentals and trades, with priorities that changed every week. I own each client's pages and tracking from brief to launch.</p>
+            <ul class="points">
+              <li><b>Built 6+ city landing pages in Elementor</b>, which lifted conversion rates about 20%.</li>
+              <li><b>Technical cleanup on existing WordPress sites:</b> page speed, heading structure, internal links, and merging duplicate pages.</li>
+              <li><b>Run Google Ads and tracking</b> for these clients, with combined spend of about $3–5K a month.</li>
+            </ul>
+            <ul class="stack"><li>WordPress</li><li>Elementor</li><li>Core Web Vitals</li><li>GTM</li><li>Search Console</li></ul>
+            <div class="metrics"><span class="chip">~20% higher conversion rate</span><span class="chip">Clicks 2.08K → 5.71K</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mini-grid" style="margin-top:8px">
+        <article class="mini reveal">
+          <span class="role">WordPress · Redesign</span>
+          <h3>Vancouver International Music Competition</h3>
+          <p>A volunteer redesign of the competition's WordPress site, covering registration info, event pages and a mobile-first layout.</p>
+          <a class="live" href="https://vancouvercompetition.com/" target="_blank" rel="noopener">vancouvercompetition.com ↗</a>
+        </article>
+        <article class="mini reveal">
+          <span class="role">WordPress · Redesign</span>
+          <h3>Canada International Arts &amp; Music Society</h3>
+          <p>A redesign of the society's main WordPress site, with a clearer page structure and updated event and fundraising content.</p>
+          <a class="live" href="https://ciams.ca/" target="_blank" rel="noopener">ciams.ca ↗</a>
+        </article>
+        <article class="mini reveal">
+          <span class="role">WordPress · New build</span>
+          <h3>CMC Society</h3>
+          <p>A new WordPress site built from scratch, from information architecture through launch.</p>
+          <a class="live" href="https://cmcsociety.com/" target="_blank" rel="noopener">cmcsociety.com ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACKING -->
+  <section id="tracking">
+    <div class="wrap">
+      <p class="eyebrow reveal">02 — Conversion Tracking</p>
+      <h2 class="reveal">If a conversion isn't firing, I find out why</h2>
+      <p class="section-intro reveal">A page isn't done until its leads show up in GA4 and Google Ads. This is the tracking setup I use on every launch.</p>
+      <div class="track-grid">
+        <img class="reveal" src="../images/mrswirl-gtm.png" alt="Google Tag Manager workspace for Mr. Swirl showing Google Ads conversion tags and GA4 event tags" loading="lazy">
+        <ol class="steps reveal">
+          <li><div><b>Plan the events first</b><span>List each action that matters, such as form submit, call click, booking or download, and name it the same way across GA4 and Ads.</span></div></li>
+          <li><div><b>Fire tags from the dataLayer</b><span>Push events on real success, not on button clicks, so a failed form never counts as a lead.</span></div></li>
+          <li><div><b>Map to GA4 and Google Ads</b><span>Send GA4 events with parameters, link GA4 key events to Ads, and add Ads conversion tags with Conversion Linker.</span></div></li>
+          <li><div><b>Verify before launch</b><span>Check every conversion in Tag Assistant preview and GA4 DebugView, then confirm it in Google Ads diagnostics.</span></div></li>
+          <li><div><b>Watch after launch</b><span>Compare conversions to real leads each week. A sudden drop to zero usually means a plugin update or form change broke something.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- QA -->
+  <section class="qa" id="qa">
+    <div class="wrap">
+      <p class="eyebrow reveal">03 — Launch QA</p>
+      <h2 class="reveal">What "done" means before a client sees it</h2>
+      <p class="section-intro reveal">I run this checklist on every landing page, and I'd use the same one when reviewing a junior developer's work.</p>
+      <div class="qa-grid">
+        <div class="qa-col reveal">
+          <h3>Design</h3>
+          <ul><li>Matches the mockup in spacing, alignment and type</li><li>Checked at 360, 768, 1024 and 1440px widths</li><li>Real devices: iPhone Safari and Android Chrome</li><li>No layout shift when fonts and images load</li></ul>
+        </div>
+        <div class="qa-col reveal">
+          <h3>Forms &amp; CTAs</h3>
+          <ul><li>Test submission received by the client inbox or CRM</li><li>Validation and error states work</li><li>tel: links and booking links work on mobile</li><li>Thank-you state or page shows correctly</li></ul>
+        </div>
+        <div class="qa-col reveal">
+          <h3>Tracking</h3>
+          <ul><li>GA4 event visible in DebugView</li><li>Google Ads conversion recorded</li><li>No duplicate fires on refresh</li><li>UTM and gclid preserved through the form</li></ul>
+        </div>
+        <div class="qa-col reveal">
+          <h3>Performance &amp; SEO</h3>
+          <ul><li>PageSpeed and Core Web Vitals checked on mobile</li><li>Images compressed and sized</li><li>Title, meta, one H1, and noindex where needed</li><li>Staging to production with no broken URLs</li></ul>
+        </div>
+      </div>
+      <div class="story reveal">
+        <b>Why tracking is on the checklist</b>
+        <p>A page can look right and send its emails while Google Ads records zero conversions. A form plugin that redirects before the tag fires, or a plugin update that renames a form, is enough to cause it. That's why I don't call a page done until I've seen the conversion appear in Google Ads.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow reveal">04 — Stack</p>
+      <h2 class="reveal">Tools I use every day</h2>
+      <p class="section-intro reveal">I use AI coding tools to move faster, but I review and understand every line before I ship it.</p>
+      <div class="skill-grid">
+        <div class="skill reveal"><h3>WordPress</h3><ul class="tags"><li>Elementor</li><li>Divi</li><li>Theme customization</li><li>Plugins &amp; updates</li><li>Staging → production</li></ul></div>
+        <div class="skill reveal"><h3>Front-end</h3><ul class="tags"><li>HTML5</li><li>CSS / responsive</li><li>JavaScript</li><li>Accessibility</li><li>Pixel-matching mockups</li></ul></div>
+        <div class="skill reveal"><h3>Tracking &amp; Analytics</h3><ul class="tags"><li>GA4</li><li>Google Tag Manager</li><li>dataLayer</li><li>Google Ads conversions</li><li>Looker Studio</li></ul></div>
+        <div class="skill reveal"><h3>Performance &amp; SEO</h3><ul class="tags"><li>Core Web Vitals</li><li>PageSpeed</li><li>Technical SEO</li><li>Search Console</li></ul></div>
+        <div class="skill reveal"><h3>Integrations</h3><ul class="tags"><li>Zapier</li><li>Mailchimp</li><li>Google Business Profile</li><li>AI chat widgets</li></ul></div>
+        <div class="skill reveal"><h3>Workflow</h3><ul class="tags"><li>Google UX Design cert</li><li>AI-assisted coding</li><li>Git / GitHub Pages</li><li>Written dev docs</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="exp" id="experience">
+    <div class="wrap">
+      <p class="eyebrow reveal">05 — Experience</p>
+      <h2 class="reveal">Web work by role</h2>
+      <div class="timeline" style="margin-top:30px">
+        <div class="job reveal"><span class="when">May 2025 – Present</span><div><h3>SEO &amp; PPC Specialist (Part-time)</h3><div class="org">Rithaler Consulting · Agency</div><p>Landing pages, tracking and technical fixes for 5+ local service clients.</p></div></div>
+        <div class="job reveal"><span class="when">Sep 2023 – Present</span><div><h3>Digital Marketing Specialist</h3><div class="org">Mr. Swirl Plumbing</div><p>Full website redesign, 10+ city landing pages, AI chatbot, and GTM conversion tracking on about $10K a month of ad spend.</p></div></div>
+        <div class="job reveal"><span class="when">Sep 2022 – Present</span><div><h3>Marketing Coordinator → Digital Marketing Specialist</h3><div class="org">Columbia Academy</div><p>Built the WordPress website and 8+ campus landing pages, and set up GA4, GTM and email automation.</p></div></div>
+        <div class="job reveal"><span class="when">Apr 2022 – Jan 2026</span><div><h3>Website Specialist (Volunteer)</h3><div class="org">Canada International Arts &amp; Music Society</div><p>Redesigned two WordPress sites and built a third from scratch.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-box">
+      <p class="eyebrow reveal">06 — Contact</p>
+      <h2 class="reveal">Let's talk</h2>
+      <p class="section-intro reveal">I'm based in Vancouver, BC, available 9 AM–5 PM Pacific, and open to full-time remote web developer roles in Canada.</p>
+      <ul class="contact-list reveal">
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><a href="mailto:daniel.doananh@gmail.com">daniel.doananh@gmail.com</a></li>
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg></span><a href="tel:+16047194645">+1 (604) 719-4645</a></li>
+      </ul>
+      <div class="btn-row reveal">
+        <a class="btn btn-primary" href="mailto:daniel.doananh@gmail.com">Email Me</a>
+        <a class="btn btn-ghost" href="../resume-daniel-doan.pdf" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Daniel Doan · Vancouver, BC</span>
+    <span>Hand-coded HTML/CSS/JS · hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(btn){
+    const open = document.getElementById('nav-links').classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  }
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{
+    document.getElementById('nav-links').classList.remove('open');
+    document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+  }));
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
