@@ -9,6 +9,7 @@
   <meta property="og:title" content="Daniel Doan | Web Developer — WordPress &amp; Landing Pages">
   <meta property="og:description" content="WordPress landing pages built for paid traffic, with GA4 + GTM conversion tracking that actually fires.">
   <meta property="og:type" content="website">
+  <meta name="referrer" content="no-referrer">
   <link rel="canonical" href="https://danieldoananh.github.io/portfolio/web-developer/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,6 +102,27 @@
     .live:hover{text-decoration:underline}
     .links{display:flex;flex-wrap:wrap;gap:8px 18px}
 
+    /* Client blocks + device mockups */
+    .client{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:30px;margin-bottom:28px}
+    .client-head{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end;margin-bottom:26px}
+    .client-head h3{font-size:1.5rem;margin:6px 0 10px}
+    .client-head p{color:var(--ink-soft);font-size:.95rem;max-width:72ch}
+    .client-head .metrics{border:0;padding:0;flex-direction:column;align-items:flex-end}
+    .lp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px 22px}
+    .lp h4{font-family:var(--display);font-size:1.05rem;margin:18px 0 8px}
+    .lp .live{margin-top:6px}
+    .device{position:relative;padding-right:18%;padding-bottom:6%}
+    .device .d{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:10px;border:1px solid var(--line);border-top:14px solid #E7EDF2;box-shadow:0 10px 28px rgba(15,37,64,.12);background:#fff}
+    .device .m{position:absolute;right:0;bottom:0;width:27%;height:auto;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:16px;border:5px solid #0B1B2F;box-shadow:0 12px 26px rgba(15,37,64,.3);background:#fff}
+    .feat{list-style:none;display:flex;flex-direction:column;gap:5px;margin-bottom:6px}
+    .feat li{font-size:.86rem;color:var(--ink-soft);padding-left:16px;position:relative}
+    .feat li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--teal)}
+    .lp-more{background:var(--mist);border:1px dashed var(--line);border-radius:12px;padding:22px;align-self:start}
+    .lp-more h4{margin-top:0}
+    .more-links{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .more-links a{font-weight:600;font-size:.9rem;text-decoration:none}
+    .more-links a:hover{text-decoration:underline}
+    .lp-more p{font-size:.84rem;color:var(--slate)}
     .mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .mini{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
     .mini h3{font-size:1.08rem;margin:8px 0 10px}
@@ -165,7 +187,9 @@
       .btn:hover{transform:none}
     }
     @media (max-width:900px){
-      .hero-grid,.proj,.track-grid{grid-template-columns:1fr}
+      .hero-grid,.proj,.track-grid,.client-head{grid-template-columns:1fr}
+      .client-head .metrics{flex-direction:row;align-items:flex-start}
+      .client{padding:20px}
       .proj:nth-child(even) .proj-media{order:0}
       .job{grid-template-columns:1fr;gap:6px}
       section{padding:64px 0}
@@ -206,7 +230,7 @@
       <div>
         <p class="hero-title-line">Web Developer · WordPress · Landing Pages · GA4 &amp; GTM</p>
         <h1>I build landing pages for Google Ads, and I check that <em>every conversion fires</em>.</h1>
-        <p class="value">I build WordPress sites and landing pages for paid traffic, from brief to launch, across several client accounts. I've spent 4+ years in WordPress, and I set up and debug the GA4, Google Tag Manager and Google Ads tracking that shows clients which ads bring in leads.</p>
+        <p class="value">I build WordPress sites and landing pages for paid traffic, from brief to launch, across several client accounts. I've spent 4+ years in WordPress, working with custom themes, ACF, custom post types, and the PHP to fix what breaks. I also set up and debug the GA4, Google Tag Manager and Google Ads tracking that shows clients which ads bring in leads.</p>
         <ul class="facts" aria-label="Quick facts">
           <li><b>4+ yrs</b> WordPress</li>
           <li><b>20+</b> sites &amp; landing pages</li>
@@ -241,91 +265,119 @@
   <!-- LANDING PAGES -->
   <section class="work" id="work">
     <div class="wrap">
-      <p class="eyebrow reveal">01 — Landing Pages &amp; Sites</p>
-      <h2 class="reveal">Pages built for paid traffic</h2>
-      <p class="section-intro reveal">Each of these went from a short brief to a live page. I built the page, wired the form, set up tracking, and tested on mobile before launch.</p>
+      <p class="eyebrow reveal">01 — Landing Pages</p>
+      <h2 class="reveal">Live pages built for Google Ads</h2>
+      <p class="section-intro reveal">These are real pages running paid traffic today. For each one I built the page, wired up the form, set up the tracking, and checked it on mobile before launch. Screenshots show desktop and phone.</p>
 
-      <div class="proj-list">
-
-        <article class="proj reveal">
-          <div class="proj-media two">
-            <img src="../images/columbia-website-mockup.jpg" alt="Columbia Academy landing page on laptop and phone, with a school-tour CTA and an inquiry form above the fold" loading="lazy">
-            <img src="../images/Untitled%20design-20.jpg" alt="Columbia Academy Elementary tuition and fee landing page on laptop and phone, with a 'Need Help?' admissions form" loading="lazy">
-          </div>
+      <!-- Mr. Swirl -->
+      <div class="client reveal">
+        <div class="client-head">
           <div>
-            <span class="role">WordPress · Elementor · Google Ads landing pages</span>
-            <h3>Columbia Academy: admissions landing pages</h3>
-            <p>A private school in Vancouver running Google Ads to parents. Each ad group needed its own landing page that matched what the parent had searched for, such as elementary tuition or a campus tour.</p>
-            <ul class="points">
-              <li><b>Built 8+ campus- and program-specific pages</b> in Elementor that share one consistent layout.</li>
-              <li><b>Inquiry form above the fold</b> on desktop. On mobile it sits right after the hero, with a sticky "Book a School Tour" CTA.</li>
-              <li><b>Tracked form submissions, tour clicks and brochure downloads</b> as GA4 events and Google Ads conversions. Leads go to Mailchimp through Zapier for nurture emails.</li>
-            </ul>
-            <ul class="stack"><li>WordPress</li><li>Elementor</li><li>GA4</li><li>GTM</li><li>Google Ads</li><li>Zapier</li><li>Mailchimp</li></ul>
-            <div class="metrics"><span class="chip">15 conversions / mo</span><span class="chip">$81 cost / conversion</span><span class="chip">10–15 inquiries / mo</span></div>
-            <div class="links">
-              <a class="live" href="https://columbiaacademy.ca/" target="_blank" rel="noopener">Visit live site ↗</a>
-            </div>
+            <span class="role">Client · Plumbing · ~$10K/mo Google Ads</span>
+            <h3>Mr. Swirl Plumbing</h3>
+            <p>Each Google Ads campaign gets its own page: one service, one city, one offer. I build them in WordPress on Divi with WP Rocket caching. They share a reusable layout of a trust bar, an above-the-fold form, a sticky mobile call bar and a reviews section.</p>
           </div>
-        </article>
-
-        <article class="proj reveal">
-          <div class="proj-media">
-            <img src="../images/mrswirl-website-mockup.jpg" alt="Redesigned Mr. Swirl Plumbing website on laptop and phone, with technician photography, sticky call buttons and live chat" loading="lazy">
-          </div>
-          <div>
-            <span class="role">WordPress · Divi · Redesign + city landing pages</span>
-            <h3>Mr. Swirl Plumbing: site redesign and 10+ city pages</h3>
-            <p>A plumbing company spending about $10K a month on Google Ads, whose site used stock photos and long text that didn't convert. I rebuilt it to load fast and make calling easy.</p>
-            <ul class="points">
-              <li><b>Redesigned the full site in Divi</b> using real technician photos, sticky call and booking CTAs, and reviews placed near each CTA.</li>
-              <li><b>Built 10+ city landing pages</b> (Coquitlam, Maple Ridge, New Westminster and more) on a reusable layout with unique local content.</li>
-              <li><b>Added an AI chatbot</b> that captures and qualifies leads after hours.</li>
-            </ul>
-            <ul class="stack"><li>WordPress</li><li>Divi</li><li>HTML/CSS</li><li>GTM</li><li>GA4</li><li>Google Ads</li></ul>
-            <div class="metrics"><span class="chip">+20% homepage conversions</span><span class="chip">−20% cost / lead</span><span class="chip">+60% city-page organic traffic</span></div>
-          </div>
-        </article>
-
-        <article class="proj reveal">
-          <div class="proj-media two">
-            <img class="contain" src="../images/landscaping-kamloops-seo.png" alt="Search Console 6-month comparison for a Kamloops landscaping client: clicks 2.55K to 3.38K" loading="lazy">
-            <img class="contain" src="../images/event-rentals-kelowna-seo.png" alt="Search Console 6-month comparison for a Kelowna event rentals client: clicks 2.08K to 5.71K" loading="lazy">
-          </div>
-          <div>
-            <span class="role">Agency · Multi-client · Elementor</span>
-            <h3>Rithaler Consulting: agency work for local service clients</h3>
-            <p>Agency work across 5+ local service businesses, including landscaping, event rentals and trades, with priorities that changed every week. I own each client's pages and tracking from brief to launch.</p>
-            <ul class="points">
-              <li><b>Built 6+ city landing pages in Elementor</b>, which lifted conversion rates about 20%.</li>
-              <li><b>Technical cleanup on existing WordPress sites:</b> page speed, heading structure, internal links, and merging duplicate pages.</li>
-              <li><b>Run Google Ads and tracking</b> for these clients, with combined spend of about $3–5K a month.</li>
-            </ul>
-            <ul class="stack"><li>WordPress</li><li>Elementor</li><li>Core Web Vitals</li><li>GTM</li><li>Search Console</li></ul>
-            <div class="metrics"><span class="chip">~20% higher conversion rate</span><span class="chip">Clicks 2.08K → 5.71K</span></div>
-          </div>
-        </article>
-
+          <div class="metrics"><span class="chip">−20% cost / lead</span><span class="chip">+20% conversions</span><span class="chip">+60% city-page traffic</span></div>
+        </div>
+        <div class="lp-grid">
+          <article class="lp">
+            <div class="device"><img class="d" src="../images/web-dev/mrswirl-hwt-ridge-meadows-desktop.webp" alt="Mr. Swirl hot water tank landing page for Ridge Meadows on desktop, with a free-quote form beside the headline" loading="lazy" width="1200" height="750"><img class="m" src="../images/web-dev/mrswirl-hwt-ridge-meadows-mobile.webp" alt="The same page on a phone, with a sticky Call Us Now bar" loading="lazy" width="600" height="1260"></div>
+            <h4>Hot Water Tank Replacement: Ridge Meadows</h4>
+            <ul class="feat"><li>Full menu removed, leaving only call and book, to keep ad traffic focused</li><li>H1 matches the search ad; quote form sits beside it</li><li>Trust bar (BBB A+, 1,000+ reviews) and a same-day offer badge</li></ul>
+            <a class="live" href="https://www.mrswirl.com/hwt-ridge-meadows/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lp">
+            <div class="device"><img class="d" src="../images/web-dev/mrswirl-burnaby-247-desktop.webp" alt="Mr. Swirl 24/7 plumbing landing page for Burnaby on desktop, with Call and Book Online buttons under the hero" loading="lazy" width="1200" height="750"><img class="m" src="../images/web-dev/mrswirl-burnaby-247-mobile.webp" alt="The Burnaby page on a phone, with the Book Online Now form right after the hero" loading="lazy" width="600" height="1260"></div>
+            <h4>24/7 Emergency Plumber: Burnaby</h4>
+            <ul class="feat"><li>Call and Book Online bar placed directly under the hero</li><li>On mobile, the booking form comes right after the headline</li><li>Local proof: reviews, FAQ, service-area map</li></ul>
+            <a class="live" href="https://www.mrswirl.com/burnaby-24-7-plumbing/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lp">
+            <div class="device"><img class="d" src="../images/web-dev/mrswirl-repiping-financing-desktop.webp" alt="Mr. Swirl repiping financing landing page on desktop, with an 'as low as $43.78 bi-weekly' badge" loading="lazy" width="1200" height="750"><img class="m" src="../images/web-dev/mrswirl-repiping-financing-mobile.webp" alt="The repiping financing page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>Repiping Financing Offer</h4>
+            <ul class="feat"><li>Offer-led page: "as low as $43.78 bi-weekly" with VaultPay</li><li>"How financing works" steps to answer objections</li><li>Quote form and click-to-call at both the top and bottom of the page</li></ul>
+            <a class="live" href="https://www.mrswirl.com/repiping-financing/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+        </div>
       </div>
 
-      <div class="mini-grid" style="margin-top:8px">
+      <!-- Columbia Academy -->
+      <div class="client reveal">
+        <div class="client-head">
+          <div>
+            <span class="role">Client · Private school · Google Ads</span>
+            <h3>Columbia Academy</h3>
+            <p>Seven landing pages that follow a parent's decision path for two programs, K–7 and Grades 8–12: program, then tuition, then admission. All seven share one layout: the logo and a search-matched headline on the left, and an admissions form on the right with a grade selector. Each form submission is tracked as a GA4 event and a Google Ads conversion.</p>
+          </div>
+          <div class="metrics"><span class="chip">15 conversions / mo</span><span class="chip">$81 cost / conversion</span><span class="chip">10–15 inquiries / mo</span></div>
+        </div>
+        <div class="lp-grid">
+          <article class="lp">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-k7-desktop.webp" alt="Columbia Academy K–7 program landing page on desktop, with a Book a School Tour form" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-k7-mobile.webp" alt="The K–7 page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>K–7 Program</h4>
+            <a class="live" href="https://columbiaacademy.ca/k-7/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lp">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-k7-tuition-desktop.webp" alt="Columbia Academy K–7 tuition and fee schedule landing page on desktop" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-k7-tuition-mobile.webp" alt="The K–7 tuition page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>K–7 Tuition &amp; Fee Schedule</h4>
+            <a class="live" href="https://columbiaacademy.ca/k-7-tuition-fee-schedule/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lp">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-k7-admission-desktop.webp" alt="Columbia Academy K–7 admission process landing page on desktop, with a Start Your Child's Application form" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-k7-admission-mobile.webp" alt="The K–7 admission page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>K–7 Admission Process</h4>
+            <a class="live" href="https://columbiaacademy.ca/k7-admission-process/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lp">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-g8-12-desktop.webp" alt="Columbia Academy Grades 8–12 program landing page on desktop, with a Speak With Admissions form" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-g8-12-alt-mobile.webp" alt="The Grades 8–12 page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>Grades 8–12 Program</h4>
+            <a class="live" href="https://columbiaacademy.ca/g8-12/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lp">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-g8-12-tuition-desktop.webp" alt="Columbia Academy Grades 8–12 tuition and fee schedule landing page on desktop" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-g8-12-tuition-mobile.webp" alt="The Grades 8–12 tuition page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>Grades 8–12 Tuition &amp; Fee Schedule</h4>
+            <a class="live" href="https://columbiaacademy.ca/g8-12-tuition-fee-schedule/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lp lp-more">
+            <h4>More live pages</h4>
+            <ul class="more-links">
+              <li><a href="https://columbiaacademy.ca/g8-12-admission-process_lp/" target="_blank" rel="noopener noreferrer">Grades 8–12 Admission Process ↗</a></li>
+              <li><a href="https://columbiaacademy.ca/apply/high-school-tuition-fees/" target="_blank" rel="noopener noreferrer">High School Tuition Fees (apply flow) ↗</a></li>
+            </ul>
+            <p>The original WordPress website for Columbia Academy, also mine, was built in 2022–23.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Agency -->
+      <div class="client reveal">
+        <div class="client-head">
+          <div>
+            <span class="role">Agency · Rithaler Consulting · 5+ clients</span>
+            <h3>Multi-client agency work</h3>
+            <p>Landscaping, event rentals and trades clients, with priorities that change every week. For each client I build city landing pages in Elementor (6+ so far, conversion rate up about 20%), clean up existing WordPress sites (page speed, headings, internal links, duplicate pages), and support their Google Ads with combined spend of about $3–5K a month.</p>
+          </div>
+          <div class="metrics"><span class="chip">~20% higher conversion rate</span><span class="chip">Clicks 2.08K → 5.71K</span></div>
+        </div>
+      </div>
+
+      <div class="mini-grid">
         <article class="mini reveal">
           <span class="role">WordPress · Redesign</span>
           <h3>Vancouver International Music Competition</h3>
           <p>A volunteer redesign of the competition's WordPress site, covering registration info, event pages and a mobile-first layout.</p>
-          <a class="live" href="https://vancouvercompetition.com/" target="_blank" rel="noopener">vancouvercompetition.com ↗</a>
+          <a class="live" href="https://vancouvercompetition.com/" target="_blank" rel="noopener noreferrer">vancouvercompetition.com ↗</a>
         </article>
         <article class="mini reveal">
           <span class="role">WordPress · Redesign</span>
           <h3>Canada International Arts &amp; Music Society</h3>
           <p>A redesign of the society's main WordPress site, with a clearer page structure and updated event and fundraising content.</p>
-          <a class="live" href="https://ciams.ca/" target="_blank" rel="noopener">ciams.ca ↗</a>
+          <a class="live" href="https://ciams.ca/" target="_blank" rel="noopener noreferrer">ciams.ca ↗</a>
         </article>
         <article class="mini reveal">
           <span class="role">WordPress · New build</span>
           <h3>CMC Society</h3>
           <p>A new WordPress site built from scratch, from information architecture through launch.</p>
-          <a class="live" href="https://cmcsociety.com/" target="_blank" rel="noopener">cmcsociety.com ↗</a>
+          <a class="live" href="https://cmcsociety.com/" target="_blank" rel="noopener noreferrer">cmcsociety.com ↗</a>
         </article>
       </div>
     </div>
@@ -388,7 +440,7 @@
       <h2 class="reveal">Tools I use every day</h2>
       <p class="section-intro reveal">I use AI coding tools to move faster, but I review and understand every line before I ship it.</p>
       <div class="skill-grid">
-        <div class="skill reveal"><h3>WordPress</h3><ul class="tags"><li>Elementor</li><li>Divi</li><li>Theme customization</li><li>Plugins &amp; updates</li><li>Staging → production</li></ul></div>
+        <div class="skill reveal"><h3>WordPress</h3><ul class="tags"><li>Custom themes</li><li>Child themes</li><li>ACF</li><li>Custom post types</li><li>PHP</li><li>Elementor</li><li>Divi</li><li>WP Rocket</li><li>Staging → production</li></ul></div>
         <div class="skill reveal"><h3>Front-end</h3><ul class="tags"><li>HTML5</li><li>CSS / responsive</li><li>JavaScript</li><li>Accessibility</li><li>Pixel-matching mockups</li></ul></div>
         <div class="skill reveal"><h3>Tracking &amp; Analytics</h3><ul class="tags"><li>GA4</li><li>Google Tag Manager</li><li>dataLayer</li><li>Google Ads conversions</li><li>Looker Studio</li></ul></div>
         <div class="skill reveal"><h3>Performance &amp; SEO</h3><ul class="tags"><li>Core Web Vitals</li><li>PageSpeed</li><li>Technical SEO</li><li>Search Console</li></ul></div>
