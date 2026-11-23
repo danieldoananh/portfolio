@@ -158,14 +158,6 @@
     .tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none}
     .tags li{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);background:var(--mist);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
 
-    /* Experience */
-    .exp{background:var(--mist)}
-    .timeline{display:flex;flex-direction:column;gap:14px}
-    .job{display:grid;grid-template-columns:200px 1fr;gap:24px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
-    .job .when{font-family:var(--mono);font-size:.78rem;color:var(--slate)}
-    .job h3{font-size:1.05rem}
-    .job .org{font-size:.86rem;color:var(--teal);font-weight:600;margin-bottom:6px}
-    .job p{font-size:.9rem;color:var(--ink-soft)}
 
     /* Contact */
     .contact-box{max-width:720px}
@@ -191,7 +183,6 @@
       .client-head .metrics{flex-direction:row;align-items:flex-start}
       .client{padding:20px}
       .proj:nth-child(even) .proj-media{order:0}
-      .job{grid-template-columns:1fr;gap:6px}
       section{padding:64px 0}
       .nav-links{position:absolute;top:68px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px 16px;gap:18px;border-bottom:1px solid var(--line);display:none;align-items:flex-start}
       .nav-links.open{display:flex}
@@ -216,7 +207,6 @@
       <li><a href="#tracking">Tracking</a></li>
       <li><a href="#qa">QA</a></li>
       <li><a href="#skills">Stack</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
   </nav>
@@ -239,7 +229,6 @@
         </ul>
         <div class="btn-row">
           <a class="btn btn-primary" href="#work">See Landing Pages</a>
-          <a class="btn btn-ghost" href="../resume-daniel-doan.pdf" download>Download Resume</a>
         </div>
       </div>
 
@@ -450,24 +439,10 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="exp" id="experience">
-    <div class="wrap">
-      <p class="eyebrow reveal">05 — Experience</p>
-      <h2 class="reveal">Web work by role</h2>
-      <div class="timeline" style="margin-top:30px">
-        <div class="job reveal"><span class="when">May 2025 – Present</span><div><h3>SEO &amp; PPC Specialist (Part-time)</h3><div class="org">Rithaler Consulting · Agency</div><p>Landing pages, tracking and technical fixes for 5+ local service clients.</p></div></div>
-        <div class="job reveal"><span class="when">Sep 2023 – Present</span><div><h3>Digital Marketing Specialist</h3><div class="org">Mr. Swirl Plumbing</div><p>Full website redesign, 10+ city landing pages, AI chatbot, and GTM conversion tracking on about $10K a month of ad spend.</p></div></div>
-        <div class="job reveal"><span class="when">Sep 2022 – Present</span><div><h3>Marketing Coordinator → Digital Marketing Specialist</h3><div class="org">Columbia Academy</div><p>Built the WordPress website and 8+ campus landing pages, and set up GA4, GTM and email automation.</p></div></div>
-        <div class="job reveal"><span class="when">Apr 2022 – Jan 2026</span><div><h3>Website Specialist (Volunteer)</h3><div class="org">Canada International Arts &amp; Music Society</div><p>Redesigned two WordPress sites and built a third from scratch.</p></div></div>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap contact-box">
-      <p class="eyebrow reveal">06 — Contact</p>
+      <p class="eyebrow reveal">05 — Contact</p>
       <h2 class="reveal">Let's talk</h2>
       <p class="section-intro reveal">I'm based in Vancouver, BC, available 9 AM–5 PM Pacific, and open to full-time remote web developer roles in Canada.</p>
       <ul class="contact-list reveal">
@@ -476,7 +451,6 @@
       </ul>
       <div class="btn-row reveal">
         <a class="btn btn-primary" href="mailto:daniel.doananh@gmail.com">Email Me</a>
-        <a class="btn btn-ghost" href="../resume-daniel-doan.pdf" download>Download Resume</a>
       </div>
     </div>
   </section>
