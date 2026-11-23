@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Doan | WordPress Website Designer — Divi, Elementor &amp; Responsive Design</title>
+  <meta name="description" content="Daniel Doan is a Vancouver-based WordPress website designer who designs and builds clean, responsive websites in Divi and Elementor, from creative direction to launch.">
+  <meta name="author" content="Daniel Doan">
+  <meta property="og:title" content="Daniel Doan | WordPress Website Designer">
+  <meta property="og:description" content="Clean, responsive WordPress websites, designed and built to launch.">
+  <meta property="og:type" content="website">
+  <meta name="referrer" content="no-referrer">
+  <link rel="canonical" href="https://danieldoananh.github.io/portfolio/web-design/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#F6F3EE; --card:#FFFFFF; --ink:#1A1A1A; --ink-soft:#3D3A36; --muted:#6B665E;
+      --line:#E4DED4; --accent:#C9472A; --accent-soft:#F6E3DC; --dark:#1C1B19;
+      --radius:16px;
+      --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:80px}
+    body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:16px}
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--accent)}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+    .wrap{width:min(1160px,calc(100% - 32px));margin:0 auto}
+    section{padding:96px 0}
+    .kicker{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+    .kicker::before{content:"";width:28px;height:1.5px;background:var(--accent)}
+    h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.015em}
+    h2{font-size:clamp(2rem,4.2vw,3rem);margin-bottom:16px}
+    .lead{color:var(--muted);max-width:62ch;font-size:1.05rem;margin-bottom:48px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(246,243,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .logo{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--ink);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;font-weight:500}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-cta{background:var(--ink);color:#fff!important;padding:9px 18px;border-radius:999px}
+    .nav-cta:hover{background:var(--accent)}
+    .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:.8rem;font-weight:600;cursor:pointer;color:var(--ink)}
+
+    /* Hero */
+    .hero{padding:84px 0 72px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+    .hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);margin-bottom:22px}
+    .hero h1 em{font-style:italic;color:var(--accent);font-weight:400}
+    .hero p.sub{font-size:1.12rem;color:var(--ink-soft);max-width:48ch;margin-bottom:26px}
+    .pills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-bottom:32px}
+    .pills li{font-size:.8rem;font-weight:500;color:var(--ink-soft);border:1px solid var(--line);background:var(--card);padding:6px 13px;border-radius:999px}
+    .btn-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.95rem;padding:14px 26px;border-radius:999px;transition:transform .15s,background .2s,color .2s}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--ink);transform:translateY(-2px)}
+    .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+    .btn-ghost:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+    .collage{position:relative;aspect-ratio:1/.82}
+    .collage img{position:absolute;border-radius:14px;box-shadow:0 24px 50px rgba(28,27,25,.18);background:#fff}
+    .collage .c1{width:78%;left:0;top:4%;transform:rotate(-3deg)}
+    .collage .c2{width:66%;right:0;top:30%;transform:rotate(2.5deg);z-index:2}
+    .collage .c3{width:52%;left:12%;bottom:0;transform:rotate(-1deg);z-index:3}
+
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:64px}
+    .stats div{padding:22px 20px;border-right:1px solid var(--line)}
+    .stats div:last-child{border-right:0}
+    .stats b{display:block;font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--ink)}
+    .stats span{font-size:.85rem;color:var(--muted)}
+
+    /* Case studies */
+    .case{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px;margin-bottom:36px}
+    .case-top{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:36px}
+    .case .num{font-family:var(--serif);font-size:.95rem;color:var(--accent);font-style:italic}
+    .case h3{font-size:clamp(1.7rem,3vw,2.3rem);margin:6px 0 12px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin-bottom:16px}
+    .tags li{font-size:.74rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:6px}
+    .case p{color:var(--ink-soft);margin-bottom:12px;font-size:.97rem}
+    .case .label{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:4px 0 8px}
+    .did{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .did li{padding-left:22px;position:relative;font-size:.94rem;color:var(--ink-soft)}
+    .did li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:1.5px;background:var(--accent)}
+    .results{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .results span{font-size:.8rem;font-weight:600;border:1px solid var(--line);padding:6px 12px;border-radius:999px;background:var(--paper)}
+    .live{display:inline-flex;gap:6px;margin-top:18px;font-weight:600;font-size:.92rem;text-decoration:none}
+    .live:hover{text-decoration:underline}
+
+    .shot{border-radius:12px;border:1px solid var(--line);overflow:hidden;background:#fff}
+    .shot img{width:100%;height:auto}
+    figure figcaption{font-size:.82rem;color:var(--muted);margin-top:10px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+    .wide{margin-bottom:28px}
+
+    /* Before / after slider */
+    .ba{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1/1.3;background:#fff;--pos:50%}
+    .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+    .ba .before{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+    .ba .bar{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:var(--accent);transform:translateX(-1px);pointer-events:none}
+    .ba .bar::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+    .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+    .ba .tag{position:absolute;top:12px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(28,27,25,.82);color:#fff;padding:5px 10px;border-radius:6px;pointer-events:none}
+    .ba .tag.l{left:12px}.ba .tag.r{right:12px}
+
+    /* Scroll preview frame */
+    .scroll-frame{position:relative;height:520px;border-radius:12px;border:1px solid var(--line);overflow:hidden;background:#fff;cursor:ns-resize}
+    .scroll-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:object-position 7s ease-in-out}
+    .scroll-frame:hover img,.scroll-frame:focus img,.scroll-frame:focus-within img{object-position:50% 100%}
+    .scroll-frame .hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);font-size:.72rem;font-weight:600;background:rgba(28,27,25,.82);color:#fff;padding:5px 12px;border-radius:999px;pointer-events:none;white-space:nowrap}
+
+    .phones{display:flex;gap:16px;justify-content:center;align-items:flex-end}
+    .phones img{width:31%;max-width:190px;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:18px;border:5px solid var(--dark);box-shadow:0 14px 30px rgba(28,27,25,.25);background:#fff;height:auto}
+
+    .lp-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .lp-strip a{text-decoration:none;color:var(--ink-soft);font-size:.8rem;font-weight:500}
+    .lp-strip img{border-radius:8px;border:1px solid var(--line);aspect-ratio:16/10;object-fit:cover;object-position:top;width:100%;height:auto;margin-bottom:8px;transition:transform .2s}
+    .lp-strip a:hover img{transform:translateY(-3px)}
+
+    .also{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+    .mini{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
+    .mini h3{font-size:1.4rem;margin:6px 0 10px}
+    .mini p{color:var(--ink-soft);font-size:.93rem}
+    .mini .shot{margin-top:18px}
+
+    /* Process */
+    .process{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s;border-top:1px solid var(--line)}
+    .step{counter-increment:s;padding:28px 26px 30px 0;border-bottom:1px solid var(--line)}
+    .step:not(:nth-child(3n)){border-right:1px solid var(--line)}
+    .step:not(:nth-child(3n+1)){padding-left:26px}
+    .step::before{content:"0" counter(s);font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.1rem;display:block;margin-bottom:10px}
+    .step h3{font-size:1.25rem;margin-bottom:8px}
+    .step p{font-size:.92rem;color:var(--muted)}
+
+    /* QA */
+    .qa{background:var(--dark);color:#EDE8E0}
+    .qa h2{color:#fff}
+    .qa .lead{color:#A9A398}
+    .qa .kicker{color:#F08A6C}.qa .kicker::before{background:#F08A6C}
+    .qa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .qa-col{border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:24px;background:rgba(255,255,255,.03)}
+    .qa-col h3{font-size:1.15rem;color:#fff;margin-bottom:14px}
+    .qa-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .qa-col li{font-size:.88rem;color:#D8D2C8;padding-left:24px;position:relative}
+    .qa-col li::before{content:"✓";position:absolute;left:0;top:0;color:#F08A6C;font-weight:700}
+
+    /* Skills */
+    .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .skill{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+    .skill h3{font-size:1.15rem;margin-bottom:12px}
+    .chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none}
+    .chips li{font-size:.78rem;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);padding:4px 11px;border-radius:999px}
+    .note{margin-top:22px;font-size:.92rem;color:var(--muted);max-width:70ch}
+
+    /* Contact */
+    .contact{text-align:center}
+    .contact h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+    .contact .lead{margin:0 auto 30px}
+    .contact-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:26px}
+    .contact-links a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:500;border:1px solid var(--line);background:var(--card);padding:12px 20px;border-radius:999px}
+    .contact-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .contact-links svg{width:17px;height:17px;stroke:currentColor}
+
+    footer{border-top:1px solid var(--line);padding:26px 0;font-size:.82rem;color:var(--muted)}
+    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.in{opacity:1;transform:none}
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+      .btn:hover,.lp-strip a:hover img{transform:none}
+      .scroll-frame{overflow-y:auto;cursor:auto}
+      .scroll-frame img{height:auto;transition:none}
+      .scroll-frame .hint{display:none}
+    }
+    @media (max-width:960px){
+      .hero-grid,.case-top,.grid-2,.also{grid-template-columns:1fr}
+      .qa-grid,.skill-grid{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .step,.step:not(:nth-child(3n+1)){padding:24px 20px 26px 0;border-right:0}
+      .step:nth-child(odd){border-right:1px solid var(--line)}
+      .step:nth-child(even){padding-left:20px}
+      .stats{grid-template-columns:1fr 1fr}
+      .stats div:nth-child(2){border-right:0}
+      .stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .lp-strip{grid-template-columns:1fr 1fr}
+      .case{padding:24px}
+      section{padding:68px 0}
+      .nav-links{position:absolute;top:66px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 16px;gap:18px;border-bottom:1px solid var(--line);display:none;align-items:flex-start}
+      .nav-links.open{display:flex}
+      .menu-btn{display:block}
+    }
+    @media (max-width:600px){
+      .qa-grid,.skill-grid,.steps,.grid-3{grid-template-columns:1fr}
+      .step,.step:nth-child(odd),.step:nth-child(even){padding:22px 0;border-right:0}
+      .scroll-frame{height:420px}
+      .case{padding:18px;border-radius:18px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap" aria-label="Main navigation">
+    <a class="logo" href="#top">Daniel Doan<span>.</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" onclick="toggleMenu(this)">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#qa">Launch QA</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">WordPress Website Designer · Vancouver, BC</p>
+          <h1>Clean, responsive websites, <em>designed</em> and built to launch.</h1>
+          <p class="sub">I design and build WordPress websites in Divi and Elementor. I work from creative direction or a Figma file and deliver a launched site that looks right on desktop, tablet and mobile. I have 4+ years of WordPress work, much of it in an agency handling several clients at once.</p>
+          <ul class="pills" aria-label="Main tools">
+            <li>Divi</li><li>Elementor</li><li>Gutenberg</li><li>Figma</li><li>Adobe XD</li><li>HTML / CSS</li><li>WooCommerce</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#work">See Selected Work</a>
+            <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <div class="collage" aria-hidden="true">
+          <img class="c1" src="../images/web-design/columbia-mockup.webp" alt="" width="1400" height="892">
+          <img class="c2" src="../images/web-design/cmc-mockup.webp" alt="" width="1400" height="892">
+          <img class="c3" src="../images/web-design/mrswirl-mockup.webp" alt="" width="1400" height="892">
+        </div>
+      </div>
+      <div class="stats reveal">
+        <div><b>20+</b><span>Websites &amp; landing pages launched</span></div>
+        <div><b>3</b><span>Full website redesigns</span></div>
+        <div><b>10+</b><span>Client sites maintained</span></div>
+        <div><b>Agency</b><span>Multi-client work at Rithaler Consulting</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" style="padding-top:40px">
+    <div class="wrap">
+      <p class="kicker reveal">Selected Work</p>
+      <h2 class="reveal">Redesigns, new builds and landing pages</h2>
+      <p class="lead reveal">Each project went from a brief to a launched WordPress site. I handled layout, responsive design, content updates, revisions and pre-launch QA.</p>
+
+      <!-- Columbia -->
+      <article class="case reveal">
+        <div class="case-top">
+          <div>
+            <span class="num">01</span>
+            <h3>Columbia Academy</h3>
+            <ul class="tags"><li>Website redesign</li><li>WordPress</li><li>Elementor</li><li>Landing pages</li></ul>
+            <p>A private school in downtown Vancouver. It has run a high school program since 2012 and added K–7 in 2023. The old website looked dated and relied on stock photos, which didn't match the school's reputation. The new K–7 program also needed a way to bring in parent inquiries.</p>
+          </div>
+          <div>
+            <p class="label">What I did</p>
+            <ul class="did">
+              <li>Redesigned the homepage around real student photos, key stats and a clear "why Columbia" story, with consistent brand colours throughout.</li>
+              <li>Rebuilt the gallery page so school activities are easier to browse.</li>
+              <li>Designed a success stories page that backs up the school's main message: 90% of graduates are accepted to top universities.</li>
+              <li>Built a set of landing pages for K–7 and Grades 8–12 on one shared layout, so every page looks consistent.</li>
+            </ul>
+            <div class="results"><span>8+ landing pages</span><span>15 conversions / mo</span><span>+15% organic traffic</span></div>
+            <a class="live" href="https://columbiaacademy.ca/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
+          </div>
+        </div>
+
+        <div class="grid-2 wide">
+          <figure>
+            <div class="ba" id="ba">
+              <img class="after" src="../images/web-design/columbia-home-after.webp" alt="Columbia Academy homepage after the redesign, with real student photos, university logos and key stats" loading="lazy" width="760" height="988">
+              <img class="before" src="../images/web-design/columbia-home-before.webp" alt="Columbia Academy homepage before the redesign, with stock photos and a dated layout" loading="lazy" width="558" height="725">
+              <span class="tag l">Before</span><span class="tag r">After</span>
+              <span class="bar"></span>
+              <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the homepage before and after the redesign">
+            </div>
+            <figcaption>Homepage, before and after. Drag to compare.</figcaption>
+          </figure>
+          <figure>
+            <div class="scroll-frame" tabindex="0" aria-label="Success stories page. Hover or focus to scroll through the full page.">
+              <img src="../images/web-design/columbia-success-stories.webp" alt="Columbia Academy success stories page with graduate profiles in alternating rows" loading="lazy" width="760" height="1186">
+              <span class="hint">Hover to scroll the page</span>
+            </div>
+            <figcaption>The new success stories page.</figcaption>
+          </figure>
+        </div>
+
+        <div class="grid-2 wide">
+          <figure><div class="shot"><img src="../images/web-design/columbia-gallery-before.webp" alt="Old gallery page: a plain grid of small thumbnails, many missing images" loading="lazy" width="1200" height="590"></div><figcaption>Gallery, before: a plain grid with missing thumbnails.</figcaption></figure>
+          <figure><div class="shot" style="max-width:340px"><img src="../images/web-design/columbia-gallery-after.webp" alt="New gallery page: a full-width hero and a photo mosaic of school activities" loading="lazy" width="481" height="768"></div><figcaption>Gallery, after: a hero image and a photo mosaic.</figcaption></figure>
+        </div>
+
+        <p class="label">Landing pages for Google Ads</p>
+        <div class="lp-strip">
+          <a href="https://columbiaacademy.ca/k-7/" target="_blank" rel="noopener noreferrer"><img src="../images/web-dev/columbia-k7-desktop.webp" alt="K–7 program landing page" loading="lazy" width="1200" height="640">K–7 Program ↗</a>
+          <a href="https://columbiaacademy.ca/k-7-tuition-fee-schedule/" target="_blank" rel="noopener noreferrer"><img src="../images/web-dev/columbia-k7-tuition-desktop.webp" alt="K–7 tuition landing page" loading="lazy" width="1200" height="640">K–7 Tuition ↗</a>
+          <a href="https://columbiaacademy.ca/g8-12/" target="_blank" rel="noopener noreferrer"><img src="../images/web-dev/columbia-g8-12-desktop.webp" alt="Grades 8–12 program landing page" loading="lazy" width="1200" height="640">Grades 8–12 Program ↗</a>
+          <a href="https://columbiaacademy.ca/g8-12-tuition-fee-schedule/" target="_blank" rel="noopener noreferrer"><img src="../images/web-dev/columbia-g8-12-tuition-desktop.webp" alt="Grades 8–12 tuition landing page" loading="lazy" width="1200" height="640">Grades 8–12 Tuition ↗</a>
+        </div>
+      </article>
+
+      <!-- Mr Swirl -->
+      <article class="case reveal">
+        <div class="case-top">
+          <div>
+            <span class="num">02</span>
+            <h3>Mr. Swirl Plumbing</h3>
+            <ul class="tags"><li>Website redesign</li><li>Divi</li><li>Landing pages</li><li>Hosting migration</li></ul>
+            <p>A BC plumbing company in business since 1999. Its website used stock photos and long blocks of text that didn't turn visitors into calls, and it sat on slow GoDaddy hosting.</p>
+          </div>
+          <div>
+            <p class="label">What I did</p>
+            <ul class="did">
+              <li>Redesigned the site in Divi around real technician photos, customer reviews, sticky call and booking buttons, and clear actions above the fold.</li>
+              <li>Created a reusable landing page layout for services, cities and offers, and launched 10+ pages from it.</li>
+              <li>Moved the site from GoDaddy to SiteGround with All-in-One WP Migration, improving speed and security.</li>
+              <li>Added an AI chat widget so after-hours visitors can still get in touch.</li>
+            </ul>
+            <div class="results"><span>+20% homepage conversions</span><span>10+ landing pages</span><span>GoDaddy → SiteGround</span></div>
+            <a class="live" href="https://www.mrswirl.com/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
+          </div>
+        </div>
+        <div class="grid-2">
+          <figure>
+            <div class="scroll-frame" tabindex="0" aria-label="Full Mr. Swirl landing page. Hover or focus to scroll.">
+              <img src="../images/web-design/mrswirl-landing-full.webp" alt="Full-length Mr. Swirl service landing page with hero, offers, reasons to choose, reviews and contact form" loading="lazy" width="700" height="2610">
+              <span class="hint">Hover to scroll the page</span>
+            </div>
+            <figcaption>A full service landing page, top to bottom.</figcaption>
+          </figure>
+          <figure>
+            <div class="phones">
+              <img src="../images/web-dev/mrswirl-hwt-ridge-meadows-mobile.webp" alt="Hot water tank landing page on mobile" loading="lazy" width="600" height="1260">
+              <img src="../images/web-dev/mrswirl-burnaby-247-mobile.webp" alt="Burnaby 24/7 plumbing landing page on mobile" loading="lazy" width="600" height="1260">
+              <img src="../images/web-dev/mrswirl-repiping-financing-mobile.webp" alt="Repiping financing landing page on mobile" loading="lazy" width="600" height="1260">
+            </div>
+            <figcaption style="text-align:center">Mobile layouts. Each has a sticky "Call us now" bar and the main action above the fold.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- CMC -->
+      <article class="case reveal">
+        <div class="case-top">
+          <div>
+            <span class="num">03</span>
+            <h3>Canadian Music Competitions of BC</h3>
+            <ul class="tags"><li>New website</li><li>WordPress</li><li>WooCommerce</li><li>Square payments</li></ul>
+            <p>CMC-BC is the BC branch of a national classical music competition with nearly 65 years of history. It needed its own website to promote the 2024 festival competition and to take registrations and payments online.</p>
+          </div>
+          <div>
+            <p class="label">What I did</p>
+            <ul class="did">
+              <li>Designed and launched a simple, modern site on the Sinatra theme. It serves as one hub for events, news, jury profiles and past concerts.</li>
+              <li>Built online registration with WooCommerce, using custom checkout fields for each competitor's details and repertoire.</li>
+              <li>Connected Square for card payments and set up order exports for the admin team.</li>
+              <li>Put registration and payment on a single page using one-page checkout, with a donation option, to reduce drop-off.</li>
+            </ul>
+            <div class="results"><span>Online registration + payment</span><span>One-page checkout</span><span>Built from scratch</span></div>
+          </div>
+        </div>
+        <div class="grid-2 wide">
+          <figure><div class="shot"><img src="../images/web-design/cmc-customizer.webp" alt="CMC-BC homepage being styled in the WordPress theme customizer, with the 2024 festival hero and jury photos" loading="lazy" width="1400" height="822"></div><figcaption>Homepage hero, styled in the theme customizer.</figcaption></figure>
+          <figure>
+            <div class="scroll-frame" tabindex="0" style="height:auto;aspect-ratio:1400/822" aria-label="CMC-BC registration page. Hover or focus to scroll.">
+              <img src="../images/web-design/cmc-registration-full.webp" alt="One-page registration form with competitor details, entry fees and Square payment" loading="lazy" width="700" height="1357">
+              <span class="hint">Hover to scroll the page</span>
+            </div>
+            <figcaption>One-page registration and payment.</figcaption>
+          </figure>
+        </div>
+        <div class="grid-3">
+          <figure><div class="shot"><img src="../images/web-design/cmc-events.webp" alt="Past concerts page with photo grids for each event" loading="lazy" width="1400" height="787"></div><figcaption>Past concerts</figcaption></figure>
+          <figure><div class="shot"><img src="../images/web-design/cmc-jury.webp" alt="Jury profile page with portrait and biography" loading="lazy" width="1400" height="787"></div><figcaption>Jury profiles</figcaption></figure>
+          <figure><div class="shot"><img src="../images/web-design/cmc-checkout-fields.webp" alt="WooCommerce checkout field editor with custom registration fields" loading="lazy" width="1400" height="713"></div><figcaption>Custom checkout fields</figcaption></figure>
+        </div>
+      </article>
+
+      <!-- Also -->
+      <div class="also">
+        <article class="mini reveal">
+          <span class="num" style="font-family:var(--serif);font-style:italic;color:var(--accent)">04</span>
+          <h3>Canada International Arts &amp; Music Society</h3>
+          <p>A volunteer redesign of the society's website, which promotes the Vancouver International Music Festival. The redesigned site leads with large event visuals and keeps a simple About, Events and Get Involved menu.</p>
+          <a class="live" href="https://ciams.ca/" target="_blank" rel="noopener noreferrer">Visit ciams.ca ↗</a>
+          <div class="shot"><img src="../images/web-design/ciams-desktop.webp" alt="CIAMS homepage with a large Gala Concert banner and three featured news tiles" loading="lazy" width="1200" height="750"></div>
+        </article>
+        <article class="mini reveal">
+          <span class="num" style="font-family:var(--serif);font-style:italic;color:var(--accent)">05</span>
+          <h3>Agency work: local service clients</h3>
+          <p>At Rithaler Consulting, a digital marketing agency, I look after websites for 5+ local service businesses, including landscaping, event rentals and trades. The work includes Elementor city landing pages, layout and content updates, speed fixes and ongoing site care. Priorities change every week and every site has its own brand, which is the kind of work this role describes.</p>
+          <div class="results"><span>6+ Elementor landing pages</span><span>~20% higher conversion rate</span><span>5+ client sites</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="wrap">
+      <p class="kicker reveal">Process</p>
+      <h2 class="reveal">From creative direction to launch</h2>
+      <p class="lead reveal">I work comfortably from a creative director's design or brand guide. My part is to build it accurately, keep it consistent, and deliver on time.</p>
+      <div class="steps reveal">
+        <div class="step"><h3>Brief &amp; design file</h3><p>Read the brief, brand guide and Figma or XD file. List open questions before building, not halfway through.</p></div>
+        <div class="step"><h3>Set up the system</h3><p>Set global colours, fonts, buttons and reusable sections in Divi or Elementor, so every page stays consistent.</p></div>
+        <div class="step"><h3>Build to the design</h3><p>Match spacing, type and alignment to the file, and use custom HTML and CSS where the page builder falls short.</p></div>
+        <div class="step"><h3>Responsive pass</h3><p>Adjust every section for desktop, tablet and mobile, then check on real phones, not only in the browser preview.</p></div>
+        <div class="step"><h3>Revisions</h3><p>Turn around feedback rounds quickly and keep a short change log, so the team always knows what moved.</p></div>
+        <div class="step"><h3>QA, launch &amp; care</h3><p>Run the pre-launch checklist and link audit, launch, then handle updates and improvements as the site grows.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QA -->
+  <section class="qa" id="qa">
+    <div class="wrap">
+      <p class="kicker reveal">Launch QA</p>
+      <h2 class="reveal">Checks before every launch</h2>
+      <p class="lead reveal">This is my pre-launch checklist, including a full link audit. Clients should never be the ones who find a broken button.</p>
+      <div class="qa-grid">
+        <div class="qa-col reveal"><h3>Design accuracy</h3><ul><li>Spacing, fonts and colours match the design file</li><li>Headings and buttons consistent across pages</li><li>Images sharp, cropped well, never stretched</li><li>Favicon and social share image set</li></ul></div>
+        <div class="qa-col reveal"><h3>Responsive</h3><ul><li>Desktop, tablet (768–1024px) and mobile (360–414px)</li><li>Menus, sliders and popups work on touch</li><li>No horizontal scrolling or overlapping text</li><li>Tap targets big enough for thumbs</li></ul></div>
+        <div class="qa-col reveal"><h3>Links &amp; forms</h3><ul><li>Crawl every page for broken internal and external links</li><li>Menu, button, phone and email links all tested</li><li>Forms send to the right inbox</li><li>301 redirects in place for changed URLs</li></ul></div>
+        <div class="qa-col reveal"><h3>Launch</h3><ul><li>SSL active, with no mixed-content warnings</li><li>"Discourage search engines" turned off</li><li>Page titles, meta descriptions and alt text</li><li>Caching, compressed images and a backup before go-live</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="kicker reveal">Skills &amp; Tools</p>
+      <h2 class="reveal">Design sense, builder skills</h2>
+      <div class="skill-grid" style="margin-top:36px">
+        <div class="skill reveal"><h3>Design</h3><ul class="chips"><li>Figma</li><li>Adobe XD</li><li>Canva</li><li>Wireframes &amp; prototypes</li><li>Typography &amp; spacing</li><li>Brand consistency</li></ul></div>
+        <div class="skill reveal"><h3>WordPress builders</h3><ul class="chips"><li>Divi</li><li>Elementor</li><li>Gutenberg</li><li>Theme customizer</li><li>Child themes</li><li>Plugins &amp; updates</li></ul></div>
+        <div class="skill reveal"><h3>Front-end</h3><ul class="chips"><li>HTML5</li><li>Advanced CSS</li><li>Media queries</li><li>Flexbox &amp; Grid</li><li>JavaScript basics</li><li>Accessibility</li></ul></div>
+        <div class="skill reveal"><h3>Ecommerce</h3><ul class="chips"><li>WooCommerce</li><li>Square payments</li><li>Custom checkout fields</li><li>One-page checkout</li><li>Donations</li></ul></div>
+        <div class="skill reveal"><h3>Hosting &amp; performance</h3><ul class="chips"><li>SiteGround</li><li>GoDaddy</li><li>Site migrations</li><li>WP Rocket</li><li>SSL &amp; DNS</li></ul></div>
+        <div class="skill reveal"><h3>SEO &amp; analytics</h3><ul class="chips"><li>Rank Math</li><li>Yoast SEO</li><li>Google Analytics 4</li><li>Tag Manager</li><li>Search Console</li></ul></div>
+      </div>
+      <p class="note reveal">Google UX Design certificate (NPower Canada) and a Master's in Marketing, Sales &amp; Services (Université Paris 1 Panthéon-Sorbonne). I use AI tools daily to draft copy, debug CSS and speed up QA, and I review everything before it ships.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" style="background:var(--card);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="kicker reveal" style="justify-content:center">Contact</p>
+      <h2 class="reveal">Let's build something clean.</h2>
+      <p class="lead reveal">I'm based in Vancouver, BC, on Pacific Time, and available for freelance or full-time website design work, remote or hybrid.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:daniel.doananh@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>daniel.doananh@gmail.com</a>
+        <a href="tel:+16047194645"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg>+1 (604) 719-4645</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Daniel Doan · Vancouver, BC</span>
+    <span>Designed and hand-coded · hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(btn){
+    const open=document.getElementById('nav-links').classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  }
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{
+    document.getElementById('nav-links').classList.remove('open');
+    document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+  }));
+  const ba=document.getElementById('ba');
+  if(ba){const r=ba.querySelector('input');r.addEventListener('input',()=>ba.style.setProperty('--pos',r.value+'%'));}
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.08});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  } else { document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')); }
+</script>
+</body>
+</html>
