@@ -121,6 +121,31 @@
     .lp-strip img{border-radius:8px;border:1px solid var(--line);aspect-ratio:16/10;object-fit:cover;object-position:top;width:100%;height:auto;margin-bottom:8px;transition:transform .2s}
     .lp-strip a:hover img{transform:translateY(-3px)}
 
+    /* Featured landing pages */
+    .sub-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:22px;margin:8px 0 18px}
+    .sub-head .label{margin:0;color:var(--ink);font-size:.82rem}
+    .sub-head span{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:.95rem}
+    .lp-feature{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:18px}
+    .lp-feature.three{grid-template-columns:repeat(3,1fr)}
+    .lpf{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 22px 20px;transition:transform .2s,box-shadow .2s}
+    .lpf:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(28,27,25,.10)}
+    .lpf h4{font-family:var(--serif);font-size:1.2rem;font-weight:600;margin:18px 0 6px}
+    .lpf p{font-size:.9rem;color:var(--ink-soft);margin-bottom:0}
+    .lpf .live{margin-top:10px}
+    .device{position:relative;padding-right:17%;padding-bottom:7%}
+    .device .d{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:10px;border:1px solid var(--line);border-top:14px solid #E9E4DB;box-shadow:0 12px 28px rgba(28,27,25,.14);background:#fff}
+    .device .m{position:absolute;right:0;bottom:0;width:26%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:16px;border:5px solid var(--dark);box-shadow:0 14px 28px rgba(28,27,25,.3);background:#fff}
+    .more{font-size:.88rem;color:var(--muted);margin-bottom:34px}
+    .more a{font-weight:600;text-decoration:none}
+    .more a:hover{text-decoration:underline}
+
+    /* Education */
+    .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+    .edu{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:6px}
+    .edu.new{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+    .edu .yr{font-family:var(--serif);font-style:italic;color:var(--accent)}
+    .edu h3{font-size:1.12rem;line-height:1.25}
+    .edu span{font-size:.86rem;color:var(--muted)}
     .also{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
     .mini{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
     .mini h3{font-size:1.4rem;margin:6px 0 10px}
@@ -174,13 +199,15 @@
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
       .reveal{opacity:1;transform:none;transition:none}
-      .btn:hover,.lp-strip a:hover img{transform:none}
+      .btn:hover,.lp-strip a:hover img,.lpf:hover{transform:none}
       .scroll-frame{overflow-y:auto;cursor:auto}
       .scroll-frame img{height:auto;transition:none}
       .scroll-frame .hint{display:none}
     }
     @media (max-width:960px){
       .hero-grid,.case-top,.grid-2,.also{grid-template-columns:1fr}
+      .lp-feature.three{grid-template-columns:1fr 1fr}
+      .edu-grid{grid-template-columns:1fr 1fr}
       .qa-grid,.skill-grid{grid-template-columns:1fr 1fr}
       .steps{grid-template-columns:1fr 1fr}
       .step,.step:not(:nth-child(3n+1)){padding:24px 20px 26px 0;border-right:0}
@@ -197,7 +224,7 @@
       .menu-btn{display:block}
     }
     @media (max-width:600px){
-      .qa-grid,.skill-grid,.steps,.grid-3{grid-template-columns:1fr}
+      .qa-grid,.skill-grid,.steps,.grid-3,.lp-feature,.lp-feature.three,.edu-grid{grid-template-columns:1fr}
       .step,.step:nth-child(odd),.step:nth-child(even){padding:22px 0;border-right:0}
       .scroll-frame{height:420px}
       .case{padding:18px;border-radius:18px}
@@ -215,6 +242,7 @@
       <li><a href="#process">Process</a></li>
       <li><a href="#qa">Launch QA</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
   </nav>
@@ -266,22 +294,52 @@
           <div>
             <span class="num">01</span>
             <h3>Columbia Academy</h3>
-            <ul class="tags"><li>Website redesign</li><li>WordPress</li><li>Elementor</li><li>Landing pages</li></ul>
+            <ul class="tags"><li>Landing pages</li><li>Website redesign</li><li>WordPress</li><li>Elementor</li></ul>
             <p>A private school in downtown Vancouver. It has run a high school program since 2012 and added K–7 in 2023. The old website looked dated and relied on stock photos, which didn't match the school's reputation. The new K–7 program also needed a way to bring in parent inquiries.</p>
           </div>
           <div>
             <p class="label">What I did</p>
             <ul class="did">
+              <li>Built a set of landing pages for K–7 and Grades 8–12 on one shared layout, so every page looks consistent.</li>
               <li>Redesigned the homepage around real student photos, key stats and a clear "why Columbia" story, with consistent brand colours throughout.</li>
               <li>Rebuilt the gallery page so school activities are easier to browse.</li>
               <li>Designed a success stories page that backs up the school's main message: 90% of graduates are accepted to top universities.</li>
-              <li>Built a set of landing pages for K–7 and Grades 8–12 on one shared layout, so every page looks consistent.</li>
             </ul>
             <div class="results"><span>8+ landing pages</span><span>15 conversions / mo</span><span>+15% organic traffic</span></div>
             <a class="live" href="https://columbiaacademy.ca/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
           </div>
         </div>
 
+        <div class="sub-head"><p class="label">Landing pages for Google Ads</p><span>Desktop + mobile</span></div>
+        <div class="lp-feature">
+          <article class="lpf">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-k7-desktop.webp" alt="Columbia Academy K–7 program landing page on desktop" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-k7-mobile.webp" alt="Columbia Academy K–7 program landing page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>K–7 Program</h4>
+            <p>"Book a School Tour" form beside a search-matched headline, with a brochure download as a softer second step.</p>
+            <a class="live" href="https://columbiaacademy.ca/k-7/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lpf">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-k7-tuition-desktop.webp" alt="Columbia Academy K–7 tuition landing page on desktop" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-k7-tuition-mobile.webp" alt="Columbia Academy K–7 tuition landing page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>K–7 Tuition &amp; Fee Schedule</h4>
+            <p>A fee-focused page for parents searching "tuition", with the admissions form one glance away.</p>
+            <a class="live" href="https://columbiaacademy.ca/k-7-tuition-fee-schedule/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lpf">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-k7-admission-desktop.webp" alt="Columbia Academy K–7 admission landing page on desktop" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-k7-admission-mobile.webp" alt="Columbia Academy K–7 admission landing page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>K–7 Admission Process</h4>
+            <p>The admission steps laid out clearly, ending in a "Start your child's application" form.</p>
+            <a class="live" href="https://columbiaacademy.ca/k7-admission-process/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lpf">
+            <div class="device"><img class="d" src="../images/web-dev/columbia-g8-12-tuition-desktop.webp" alt="Columbia Academy Grades 8–12 tuition landing page on desktop" loading="lazy" width="1200" height="640"><img class="m" src="../images/web-dev/columbia-g8-12-tuition-mobile.webp" alt="Columbia Academy Grades 8–12 tuition landing page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>Grades 8–12 Tuition &amp; Fee Schedule</h4>
+            <p>The same layout adapted for the high school program, with grade options in the form.</p>
+            <a class="live" href="https://columbiaacademy.ca/g8-12-tuition-fee-schedule/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+        </div>
+        <p class="more">More live pages: <a href="https://columbiaacademy.ca/g8-12/" target="_blank" rel="noopener noreferrer">Grades 8–12 Program ↗</a> · <a href="https://columbiaacademy.ca/g8-12-admission-process_lp/" target="_blank" rel="noopener noreferrer">Grades 8–12 Admission ↗</a> · <a href="https://columbiaacademy.ca/apply/high-school-tuition-fees/" target="_blank" rel="noopener noreferrer">High School Tuition Fees ↗</a></p>
+
+        <div class="sub-head"><p class="label">Website redesign</p><span>Before → after</span></div>
         <div class="grid-2 wide">
           <figure>
             <div class="ba" id="ba">
@@ -306,14 +364,6 @@
           <figure><div class="shot"><img src="../images/web-design/columbia-gallery-before.webp" alt="Old gallery page: a plain grid of small thumbnails, many missing images" loading="lazy" width="1200" height="590"></div><figcaption>Gallery, before: a plain grid with missing thumbnails.</figcaption></figure>
           <figure><div class="shot" style="max-width:340px"><img src="../images/web-design/columbia-gallery-after.webp" alt="New gallery page: a full-width hero and a photo mosaic of school activities" loading="lazy" width="481" height="768"></div><figcaption>Gallery, after: a hero image and a photo mosaic.</figcaption></figure>
         </div>
-
-        <p class="label">Landing pages for Google Ads</p>
-        <div class="lp-strip">
-          <a href="https://columbiaacademy.ca/k-7/" target="_blank" rel="noopener noreferrer"><img src="../images/web-dev/columbia-k7-desktop.webp" alt="K–7 program landing page" loading="lazy" width="1200" height="640">K–7 Program ↗</a>
-          <a href="https://columbiaacademy.ca/k-7-tuition-fee-schedule/" target="_blank" rel="noopener noreferrer"><img src="../images/web-dev/columbia-k7-tuition-desktop.webp" alt="K–7 tuition landing page" loading="lazy" width="1200" height="640">K–7 Tuition ↗</a>
-          <a href="https://columbiaacademy.ca/g8-12/" target="_blank" rel="noopener noreferrer"><img src="../images/web-dev/columbia-g8-12-desktop.webp" alt="Grades 8–12 program landing page" loading="lazy" width="1200" height="640">Grades 8–12 Program ↗</a>
-          <a href="https://columbiaacademy.ca/g8-12-tuition-fee-schedule/" target="_blank" rel="noopener noreferrer"><img src="../images/web-dev/columbia-g8-12-tuition-desktop.webp" alt="Grades 8–12 tuition landing page" loading="lazy" width="1200" height="640">Grades 8–12 Tuition ↗</a>
-        </div>
       </article>
 
       <!-- Mr Swirl -->
@@ -322,14 +372,14 @@
           <div>
             <span class="num">02</span>
             <h3>Mr. Swirl Plumbing</h3>
-            <ul class="tags"><li>Website redesign</li><li>Divi</li><li>Landing pages</li><li>Hosting migration</li></ul>
+            <ul class="tags"><li>Landing pages</li><li>Website redesign</li><li>Divi</li><li>Hosting migration</li></ul>
             <p>A BC plumbing company in business since 1999. Its website used stock photos and long blocks of text that didn't turn visitors into calls, and it sat on slow GoDaddy hosting.</p>
           </div>
           <div>
             <p class="label">What I did</p>
             <ul class="did">
-              <li>Redesigned the site in Divi around real technician photos, customer reviews, sticky call and booking buttons, and clear actions above the fold.</li>
               <li>Created a reusable landing page layout for services, cities and offers, and launched 10+ pages from it.</li>
+              <li>Redesigned the site in Divi around real technician photos, customer reviews, sticky call and booking buttons, and clear actions above the fold.</li>
               <li>Moved the site from GoDaddy to SiteGround with All-in-One WP Migration, improving speed and security.</li>
               <li>Added an AI chat widget so after-hours visitors can still get in touch.</li>
             </ul>
@@ -337,21 +387,40 @@
             <a class="live" href="https://www.mrswirl.com/" target="_blank" rel="noopener noreferrer">Visit live site ↗</a>
           </div>
         </div>
+        <div class="sub-head"><p class="label">Landing pages for Google Ads</p><span>Desktop + mobile</span></div>
+        <div class="lp-feature three">
+          <article class="lpf">
+            <div class="device"><img class="d" src="../images/web-dev/mrswirl-hwt-ridge-meadows-desktop.webp" alt="Mr. Swirl hot water tank landing page on desktop" loading="lazy" width="1200" height="750"><img class="m" src="../images/web-dev/mrswirl-hwt-ridge-meadows-mobile.webp" alt="Mr. Swirl hot water tank landing page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>Hot Water Tank: Ridge Meadows</h4>
+            <p>Menu removed so ad traffic stays focused. The quote form sits beside a headline that matches the ad.</p>
+            <a class="live" href="https://www.mrswirl.com/hwt-ridge-meadows/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lpf">
+            <div class="device"><img class="d" src="../images/web-dev/mrswirl-burnaby-247-desktop.webp" alt="Mr. Swirl Burnaby 24/7 landing page on desktop" loading="lazy" width="1200" height="750"><img class="m" src="../images/web-dev/mrswirl-burnaby-247-mobile.webp" alt="Mr. Swirl Burnaby 24/7 landing page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>24/7 Emergency Plumber: Burnaby</h4>
+            <p>Call and Book Online bar under the hero. On mobile, the booking form comes right after the headline.</p>
+            <a class="live" href="https://www.mrswirl.com/burnaby-24-7-plumbing/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+          <article class="lpf">
+            <div class="device"><img class="d" src="../images/web-dev/mrswirl-repiping-financing-desktop.webp" alt="Mr. Swirl repiping financing landing page on desktop" loading="lazy" width="1200" height="750"><img class="m" src="../images/web-dev/mrswirl-repiping-financing-mobile.webp" alt="Mr. Swirl repiping financing landing page on a phone" loading="lazy" width="600" height="1260"></div>
+            <h4>Repiping Financing Offer</h4>
+            <p>An offer-led page ("as low as $43.78 bi-weekly") with simple steps explaining how financing works.</p>
+            <a class="live" href="https://www.mrswirl.com/repiping-financing/" target="_blank" rel="noopener noreferrer">View live page ↗</a>
+          </article>
+        </div>
+
+        <div class="sub-head"><p class="label">Website redesign</p><span>Homepage</span></div>
         <div class="grid-2">
           <figure>
-            <div class="scroll-frame" tabindex="0" aria-label="Full Mr. Swirl landing page. Hover or focus to scroll.">
-              <img src="../images/web-design/mrswirl-landing-full.webp" alt="Full-length Mr. Swirl service landing page with hero, offers, reasons to choose, reviews and contact form" loading="lazy" width="700" height="2610">
+            <div class="scroll-frame" tabindex="0" aria-label="Mr. Swirl homepage. Hover or focus to scroll through the full page.">
+              <img src="../images/web-design/mrswirl-home-full.webp" alt="Full-length Mr. Swirl homepage: hero with technician, service icons, trust points, reviews, FAQ and service-area list" loading="lazy" width="760" height="2118">
               <span class="hint">Hover to scroll the page</span>
             </div>
-            <figcaption>A full service landing page, top to bottom.</figcaption>
+            <figcaption>The redesigned homepage, top to bottom (mrswirl.com).</figcaption>
           </figure>
           <figure>
-            <div class="phones">
-              <img src="../images/web-dev/mrswirl-hwt-ridge-meadows-mobile.webp" alt="Hot water tank landing page on mobile" loading="lazy" width="600" height="1260">
-              <img src="../images/web-dev/mrswirl-burnaby-247-mobile.webp" alt="Burnaby 24/7 plumbing landing page on mobile" loading="lazy" width="600" height="1260">
-              <img src="../images/web-dev/mrswirl-repiping-financing-mobile.webp" alt="Repiping financing landing page on mobile" loading="lazy" width="600" height="1260">
-            </div>
-            <figcaption style="text-align:center">Mobile layouts. Each has a sticky "Call us now" bar and the main action above the fold.</figcaption>
+            <div class="shot"><img src="../images/web-design/mrswirl-mockup.webp" alt="Mr. Swirl website shown on laptop with service and landing pages around it" loading="lazy" width="1400" height="892"></div>
+            <figcaption>The new look across the homepage and service pages: real technician photos, bold brand colours and clear calls to action.</figcaption>
           </figure>
         </div>
       </article>
@@ -457,7 +526,23 @@
         <div class="skill reveal"><h3>Hosting &amp; performance</h3><ul class="chips"><li>SiteGround</li><li>GoDaddy</li><li>Site migrations</li><li>WP Rocket</li><li>SSL &amp; DNS</li></ul></div>
         <div class="skill reveal"><h3>SEO &amp; analytics</h3><ul class="chips"><li>Rank Math</li><li>Yoast SEO</li><li>Google Analytics 4</li><li>Tag Manager</li><li>Search Console</li></ul></div>
       </div>
-      <p class="note reveal">Google UX Design certificate (NPower Canada) and a Master's in Marketing, Sales &amp; Services (Université Paris 1 Panthéon-Sorbonne). I use AI tools daily to draft copy, debug CSS and speed up QA, and I review everything before it ships.</p>
+      <p class="note reveal">I use AI tools daily to draft copy, debug CSS and speed up QA, and I review everything before it ships.</p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker reveal">Education &amp; Certificates</p>
+      <h2 class="reveal">Always learning</h2>
+      <div class="edu-grid">
+        <div class="edu new reveal"><span class="yr">2025</span><h3>Web Content Strategy: Planning, Producing and Managing Website Content</h3><span>University of British Columbia (UBC)</span></div>
+        <div class="edu new reveal"><span class="yr">2025</span><h3>Writing for the Web and Digital Media</h3><span>University of British Columbia (UBC)</span></div>
+        <div class="edu reveal"><span class="yr">2022</span><h3>Google UX Design Program</h3><span>NPower Canada</span></div>
+        <div class="edu reveal"><span class="yr">2022</span><h3>Advanced Google Analytics</h3><span>Google</span></div>
+        <div class="edu reveal"><span class="yr">2021</span><h3>Digital Marketing Certificate</h3><span>Google</span></div>
+        <div class="edu reveal"><span class="yr">2018</span><h3>Master of Marketing, Sales and Services</h3><span>Université Paris 1 Panthéon-Sorbonne, France</span></div>
+      </div>
     </div>
   </section>
 
